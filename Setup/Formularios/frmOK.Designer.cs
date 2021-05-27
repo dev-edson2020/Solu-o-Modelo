@@ -42,9 +42,9 @@
             // 
             this.lblMensagem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblMensagem.Location = new System.Drawing.Point(166, 39);
+            this.lblMensagem.Location = new System.Drawing.Point(176, 46);
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(326, 132);
+            this.lblMensagem.Size = new System.Drawing.Size(321, 131);
             this.lblMensagem.TabIndex = 1;
             // 
             // panel1
@@ -53,31 +53,31 @@
             this.panel1.Controls.Add(this.btnSair);
             this.panel1.Controls.Add(this.lblMensagem);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(4, 48);
+            this.panel1.Location = new System.Drawing.Point(3, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(502, 223);
+            this.panel1.Size = new System.Drawing.Size(505, 223);
             this.panel1.TabIndex = 2;
             // 
             // btnSair
             // 
-            this.btnSair.BackColor = System.Drawing.Color.Blue;
+            this.btnSair.BackColor = System.Drawing.Color.DarkBlue;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(401, 181);
+            this.btnSair.Location = new System.Drawing.Point(404, 180);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(93, 36);
             this.btnSair.TabIndex = 2;
-            this.btnSair.Text = "Sair";
+            this.btnSair.Text = "Ok";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(33, 46);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 139);
+            this.pictureBox1.Size = new System.Drawing.Size(137, 139);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 

@@ -44,22 +44,22 @@
             this.panel1.Controls.Add(this.btnSair);
             this.panel1.Controls.Add(this.lblMensagem);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 39);
+            this.panel1.Location = new System.Drawing.Point(3, 51);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(505, 233);
+            this.panel1.Size = new System.Drawing.Size(505, 225);
             this.panel1.TabIndex = 0;
             // 
             // btnSair
             // 
-            this.btnSair.BackColor = System.Drawing.Color.Red;
+            this.btnSair.BackColor = System.Drawing.Color.Crimson;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(404, 190);
+            this.btnSair.Location = new System.Drawing.Point(404, 180);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(93, 36);
             this.btnSair.TabIndex = 2;
-            this.btnSair.Text = "Sair";
+            this.btnSair.Text = "OK";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -67,17 +67,17 @@
             // 
             this.lblMensagem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.ForeColor = System.Drawing.Color.Crimson;
-            this.lblMensagem.Location = new System.Drawing.Point(155, 50);
+            this.lblMensagem.Location = new System.Drawing.Point(168, 39);
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(342, 129);
+            this.lblMensagem.Size = new System.Drawing.Size(329, 125);
             this.lblMensagem.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 45);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(140, 123);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -86,7 +86,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(141, 2);
+            this.label1.Location = new System.Drawing.Point(141, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(262, 36);
             this.label1.TabIndex = 1;
@@ -96,8 +96,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(512, 276);
+            this.BackColor = System.Drawing.Color.Crimson;
+            this.ClientSize = new System.Drawing.Size(512, 279);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

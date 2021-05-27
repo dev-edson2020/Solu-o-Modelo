@@ -6,12 +6,9 @@ namespace Setup.Formularios
     {
         public frmOK()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
 
-        private void btnSair_Click(object sender, System.EventArgs e)
-        {
-            this.Dispose();
-        }
+        private void btnSair_Click(object sender, System.EventArgs e) => this.Dispose();
     }
 }

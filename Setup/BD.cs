@@ -4,6 +4,9 @@ using System.Data;
 using System.Configuration;
 using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
+using System.Net.Mail;
+using System.Net;
 
 namespace Setup
 {
@@ -11,6 +14,38 @@ namespace Setup
     {
         public static string UsuarioLogado;
         public static int tentativaLogin;
+        public static string UsuarioAdmin;
+        public static string funcao;
+        public static string UsuarioId;
+
+        public static bool AcessoLiberado(string func)
+        {
+            funcao = func;
+            //if (UsuarioAdmin == "N")
+            //{
+            UsuarioAdmin = "N";
+            Formularios.frmLiberaAcesso frm = new Formularios.frmLiberaAcesso();
+            frm.ShowDialog();
+
+            if (UsuarioAdmin == "N")
+            {
+                if (tentativaLogin == 3)
+                {
+                    Geral.Erro("O sistema será fechado!");
+                    Application.Exit();
+                }
+                return false;
+            }
+            else
+            {
+                UsuarioAdmin = "N";
+                tentativaLogin = 0;
+                return true;
+            }
+            //}
+            //else
+                //return true;
+        }
 
         private static FbConnection Conectar()
         {
@@ -35,7 +70,6 @@ namespace Setup
                 }
                 catch (FbException ex)
                 {
-                    
                     throw new Exception(ex.ToString());       
                 }
                 finally
@@ -66,13 +100,37 @@ namespace Setup
             }
         }
 
+        public static int SalvarImagem(string Tabela, string Campo, string id, byte[] foto)
+        {
+            using (FbConnection ConexaoFB = Conectar())
+            {
+                try
+                {
+                    string sql = "UPDATE " + Tabela + " SET " + Campo + " = @foto WHERE " + Tabela + "_ID = " + id;
+
+                    ConexaoFB.Open();
+                    FbCommand cmd = new FbCommand(sql, ConexaoFB);
+                    cmd.Parameters.Add("@foto", FbDbType.Binary).Value = foto;
+                    return cmd.ExecuteNonQuery();
+                }
+                catch (FbException ex)
+                {
+                    throw new Exception(ex.ToString());
+                }
+                finally
+                {
+                    ConexaoFB.Dispose();
+                }
+            }
+        }
+
         public static string CvData(string data)
         {
             if (data == "")
                 return "null";
             else
             {
-                data = data.Replace("/", ".");
+                data = data.Replace("/", ".").Replace("00:00:00", "").Trim();
                 return data;
             }
         }
@@ -83,7 +141,7 @@ namespace Setup
                 return "0";
             else
             {
-                num = num.Replace("R$", "");
+                num = num.Replace("R", "").Replace("$", "");
                 num = num.Trim();
                 num = num.Replace(".", "");
                 num = num.Replace(",", ".");
@@ -110,7 +168,7 @@ namespace Setup
                 if (item == "null")
                     sql += "null, ";
                 else
-                    sql += "'" + item + "', ";
+                    sql += "'" + item.Replace("'", "''") + "', ";
             }
 
             sql += ")";
@@ -130,7 +188,7 @@ namespace Setup
                 if (Valores[i] == "null")
                     sql += Campos[i] + " = null, ";
                 else
-                    sql += Campos[i] + " = '" + Valores[i] + "', ";
+                    sql += Campos[i] + " = '" + Valores[i].Replace("'", "''") + "', ";
             }
 
             sql += "WHERE";
@@ -149,16 +207,61 @@ namespace Setup
                 ExecutarSQL(Update(Tabela, Campos, Valores, id));
         }
 
-        public static void Excluir(string Tabela, string id)
+        public static string ExecutarProcedure(string nome, string[] Valores, string Mensagem = "")
+        {
+            string sql = "SELECT ID FROM " + nome + "(";
+
+            int i = 0;
+
+            foreach (string item in Valores)
+            {
+                //Tratamento para o paramêtro ID
+                if (i == 0)
+                {
+                    i = 1;
+                    if (item == "")
+                        sql += "null, ";
+                    else
+                        sql += item + ", ";
+                }
+                else
+                {
+                    if (item == "null")
+                        sql += "null, ";
+                    else
+                        sql += "'" + item.Replace("'", "''") + "', ";
+                }
+
+            }
+
+            sql += ")";
+            sql = sql.Replace(", )", ")");
+
+            string id = Buscar(sql).Rows[0][0].ToString();
+
+            if (Convert.ToInt32(id) > 0 && Mensagem != "")
+            {
+                if (Valores[0] == "")
+                    Geral.OK(Mensagem + " Salvo com Sucesso!");
+                else
+                    Geral.OK(Mensagem + " Alterado com Sucesso!");
+            }
+
+            return id;
+        } 
+
+        public static bool Excluir(string Tabela, string id)
         {
             Geral.Pergunta("Deseja realmente excluir esse registro?");
 
             if (!Geral.Resposta)
-                return;
+                return false;
 
             string sql = "delete from " + Tabela;
             sql += " where " + Tabela + "_id = " + id;
             ExecutarSQL(sql);
+
+            return true;
         }
 
         public static void Ativar(string Tabela, string id, string status)
@@ -198,10 +301,9 @@ namespace Setup
                 }
             }
         }
+
         public static string Criptografar(string senha)
-
         {
-
             MD5 md5Hash = MD5.Create();
 
             byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(senha));
@@ -209,16 +311,67 @@ namespace Setup
             StringBuilder sBuilder = new StringBuilder();
 
             for (int i = 0; i < data.Length; i++)
-
             {
-
                 sBuilder.Append(data[i].ToString("x2"));
-
             }
 
             return sBuilder.ToString();
-
         }
 
-    }    
+        public static void EmailAdmin(string Login, string Senha, string acao)
+        {
+            using (SmtpClient s = new SmtpClient())
+            {
+                s.Host = "smtp.gmail.com";
+                s.Port = 587;
+                s.EnableSsl = true;
+                s.UseDefaultCredentials = false;
+                s.Credentials = new NetworkCredential("edianga@gmail.com", "romanateamo010");
+
+                using (MailMessage m = new MailMessage())
+                {
+                    m.From = new MailAddress("edianga@gmail.com");
+                    m.To.Add(new MailAddress("edsonanga@hotmail.com"));
+                    m.Subject = "Tentativa de " + acao + " Nº " + tentativaLogin;
+                    m.IsBodyHtml = true;
+                    m.Body = "<h1>Informações!</h1><p><strong>Login: </strong>" + Login +
+                        "</p><p><strong>Senha: </strong>" + Senha +
+                        "</p><p><strong>Computador de Acesso: </strong>" + Environment.MachineName +
+                        "</p><p><strong>Função Solicitada: </strong>" + funcao +
+                        "</p><strong>Data e Hora: </strong>" + DateTime.Now + "</p>";
+
+                    s.Send(m);
+                }
+
+                string[] c = new string[7];
+                string[] v = new string[7];
+
+                c[0] = "COMPUTADOR";
+                v[0] = Environment.MachineName;
+
+                c[1] = "USUARIO_ID";
+                v[1] = UsuarioId;
+
+                c[2] = "LOGIN";
+                v[2] = Login;
+
+                c[3] = "SENHA";
+                v[3] = Senha;
+
+                c[4] = "ACAO";
+                v[4] = acao;
+
+                c[5] = "FUNCAO";
+                v[5] = funcao;
+
+                c[6] = "TENTATIVA";
+                v[6] = tentativaLogin.ToString();
+
+                Salvar("LOG_ACESSO", c, v);
+            }
+        }
+
+       
+
+    }
 }

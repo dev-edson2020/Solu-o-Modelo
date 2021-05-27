@@ -20,7 +20,7 @@ namespace Setup.Formularios
 
         private void frmPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 SendKeys.Send("{TAB}");
                 e.SuppressKeyPress = true;
@@ -45,7 +45,7 @@ namespace Setup.Formularios
         private void btnModelo_MouseMove(object sender, MouseEventArgs e)
         {
             lblBarra.Visible = true;
-            lblBarra.Location = new Point(12, btnModelo.Location.Y);
+            lblBarra.Location = new Point(12, btnPessoa.Location.Y);
         }
 
         private void panelMenu_MouseMove(object sender, MouseEventArgs e)
@@ -108,11 +108,24 @@ namespace Setup.Formularios
             c[3] = "ativo";
             v[3] = "S";
 
-            BD.Salvar("teste", c, v);                
+            BD.Salvar("teste", c, v);
 
             Geral.OK("Salvo com sucesso!");
         }
 
-        
-    }
+        private void btnPessoa_Click(object sender, EventArgs e)
+        {
+            frmModal modal = new frmModal();
+            modal.Show();
+
+            frmMenuPessoa frm = new frmMenuPessoa();
+            frm.ShowDialog();
+
+            modal.Close();
+          
+        }
+      
+    }   
 }
+
+

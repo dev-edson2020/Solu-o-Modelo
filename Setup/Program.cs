@@ -18,23 +18,27 @@ namespace Setup
             {
                 BD.TestarConexao();
             }
-            catch(Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
                 Formularios.frmConfigDados config = new Formularios.frmConfigDados();
                 config.ShowDialog();
                 Application.Exit();
             }
-
-            //Abre o formulário de boas vindas
-            Application.Run(new Formularios.frmSplash());
-
+            /*
+                //Abre o formulário de boas vindas
+                Application.Run(new Formularios.frmSplash());
+            */
             //Abre o formulário de login
+
             Formularios.frmLogin login = new Formularios.frmLogin();
+
+
             login.ShowDialog();
 
-            //Se o usuario não conseguiu logar então
-            //encerrar o sistema
+
+
+            //Se o usuario não conseguiu logar, então encerrar o sistema
+
             if (BD.UsuarioLogado == "" || BD.UsuarioLogado == null)
             {
                 Application.Exit();
@@ -42,7 +46,7 @@ namespace Setup
             else
             {
                 //Abre o formulário principal
-                Formularios.frmPrincipal menu = new Formularios.frmPrincipal();
+                Formularios.frmPrincipal menu = new Formularios.frmPrincipal();//esse
                 menu.lblUsuarioLogado.Text = BD.UsuarioLogado;
                 menu.ShowDialog();
             }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Setup.Formularios
@@ -18,29 +19,33 @@ namespace Setup.Formularios
 
             try
             {
-                //string usuario = BD.Criptografar(txtUsuario.Text);
-                //string senha = BD.Criptografar(txtSenha.Text);
-
-                string usuario = txtUsuario.Text;
-                string senha = txtSenha.Text;
-
-               
+                string usuario = BD.Criptografar(txtUsuario.Text);
+                string senha = BD.Criptografar(txtSenha.Text);
 
                 string sql = "select u.usuario_id, p.nome from usuario u "
-                    + "INNER JOIN PESSOA p ON p.PESSOA_ID = P.PESSOA_ID "
-                    + "WHERE u.login = '" + usuario + "'"
-                    + "AND u.senha = '" +senha + "'";
-                
-                  
-                string Nome = BD.Buscar(sql).Rows[0]["nome"].ToString();
+                        + "INNER JOIN PESSOA p ON p.PESSOA_ID = u.PESSOA_ID "
+                        + "where u.ativo = 'S' and u.login = '" + usuario + "' "
+                        + "and u.senha = '" + senha + "'";
 
-                BD.UsuarioLogado = Nome;
-                Geral.OK(Nome + ", seja bem vindo!");
+                DataTable dt = BD.Buscar(sql);
+
+                BD.UsuarioLogado = dt.Rows[0]["nome"].ToString();
+                BD.UsuarioId = dt.Rows[0]["usuario_id"].ToString();
+                //BD.UsuarioAdmin = dt.Rows[0]["adm"].ToString();
+
+                Geral.OK(BD.UsuarioLogado + ", seja bem vindo!");
+
+                BD.tentativaLogin = 0;
+
                 this.Dispose();
             }
-            catch 
+            catch
             {
                 BD.tentativaLogin++;
+                lblAviso.Visible = true;
+
+                BD.funcao = "Logar no Sistema";
+                BD.EmailAdmin(txtUsuario.Text, txtSenha.Text, "Login");
 
                 if (BD.tentativaLogin == 3)
                 {
@@ -48,12 +53,11 @@ namespace Setup.Formularios
                     Application.Exit();
                 }
 
-                lblAviso.Visible = true;
-
                 Geral.Erro("Tentativa Nº " + BD.tentativaLogin + ", o sistema será fechado na terceira tentativa inválida!");
             }
 
         }
+
 
         private void btnSair_Click(object sender, EventArgs e)
         {
@@ -67,6 +71,18 @@ namespace Setup.Formularios
                 SendKeys.Send("{TAB}");
                 e.SuppressKeyPress = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            frmModal modal = new frmModal();
+            modal.Show();         
+            
         }
     }
 }

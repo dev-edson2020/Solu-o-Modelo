@@ -43,9 +43,9 @@
             // 
             this.lblMensagem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblMensagem.Location = new System.Drawing.Point(153, 42);
+            this.lblMensagem.Location = new System.Drawing.Point(168, 44);
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(344, 125);
+            this.lblMensagem.Size = new System.Drawing.Size(329, 126);
             this.lblMensagem.TabIndex = 1;
             // 
             // panel1
@@ -55,18 +55,18 @@
             this.panel1.Controls.Add(this.btnNao);
             this.panel1.Controls.Add(this.lblMensagem);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 42);
+            this.panel1.Location = new System.Drawing.Point(3, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(506, 228);
+            this.panel1.Size = new System.Drawing.Size(507, 225);
             this.panel1.TabIndex = 4;
             // 
             // btnSim
             // 
-            this.btnSim.BackColor = System.Drawing.Color.Blue;
+            this.btnSim.BackColor = System.Drawing.Color.DarkCyan;
             this.btnSim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSim.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSim.ForeColor = System.Drawing.Color.White;
-            this.btnSim.Location = new System.Drawing.Point(308, 186);
+            this.btnSim.Location = new System.Drawing.Point(305, 181);
             this.btnSim.Name = "btnSim";
             this.btnSim.Size = new System.Drawing.Size(93, 36);
             this.btnSim.TabIndex = 2;
@@ -76,11 +76,11 @@
             // 
             // btnNao
             // 
-            this.btnNao.BackColor = System.Drawing.Color.Red;
+            this.btnNao.BackColor = System.Drawing.Color.DarkCyan;
             this.btnNao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNao.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNao.ForeColor = System.Drawing.Color.White;
-            this.btnNao.Location = new System.Drawing.Point(406, 186);
+            this.btnNao.Location = new System.Drawing.Point(404, 181);
             this.btnNao.Name = "btnNao";
             this.btnNao.Size = new System.Drawing.Size(93, 36);
             this.btnNao.TabIndex = 2;
@@ -91,9 +91,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 44);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(136, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -102,7 +103,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(181, 3);
+            this.label1.Location = new System.Drawing.Point(181, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 36);
             this.label1.TabIndex = 5;
@@ -112,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(512, 276);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -120,7 +121,6 @@
             this.Name = "frmPergunta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPergunta";
-            this.Load += new System.EventHandler(this.btnNao_Click);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

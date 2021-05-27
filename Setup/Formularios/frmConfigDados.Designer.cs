@@ -63,9 +63,9 @@
             this.panelPrincipal.Controls.Add(this.label2);
             this.panelPrincipal.Controls.Add(this.pictureBox1);
             this.panelPrincipal.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelPrincipal.Location = new System.Drawing.Point(8, 52);
+            this.panelPrincipal.Location = new System.Drawing.Point(12, 75);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(497, 219);
+            this.panelPrincipal.Size = new System.Drawing.Size(488, 189);
             this.panelPrincipal.TabIndex = 0;
             // 
             // btnCancelar
@@ -74,7 +74,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCancelar.Location = new System.Drawing.Point(391, 169);
+            this.btnCancelar.Location = new System.Drawing.Point(381, 145);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(88, 35);
             this.btnCancelar.TabIndex = 7;
@@ -88,7 +88,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSalvar.Location = new System.Drawing.Point(295, 169);
+            this.btnSalvar.Location = new System.Drawing.Point(285, 145);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(90, 35);
             this.btnSalvar.TabIndex = 6;
@@ -98,7 +98,7 @@
             // 
             // txtPorta
             // 
-            this.txtPorta.Location = new System.Drawing.Point(332, 117);
+            this.txtPorta.Location = new System.Drawing.Point(332, 101);
             this.txtPorta.Name = "txtPorta";
             this.txtPorta.Size = new System.Drawing.Size(137, 23);
             this.txtPorta.TabIndex = 5;
@@ -107,7 +107,7 @@
             // 
             // txtServidor
             // 
-            this.txtServidor.Location = new System.Drawing.Point(100, 117);
+            this.txtServidor.Location = new System.Drawing.Point(100, 101);
             this.txtServidor.Name = "txtServidor";
             this.txtServidor.Size = new System.Drawing.Size(226, 23);
             this.txtServidor.TabIndex = 4;
@@ -116,7 +116,7 @@
             // btnSelecionar
             // 
             this.btnSelecionar.Font = new System.Drawing.Font("Consolas", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelecionar.Location = new System.Drawing.Point(433, 66);
+            this.btnSelecionar.Location = new System.Drawing.Point(433, 44);
             this.btnSelecionar.Name = "btnSelecionar";
             this.btnSelecionar.Size = new System.Drawing.Size(36, 25);
             this.btnSelecionar.TabIndex = 3;
@@ -127,7 +127,7 @@
             // txtArquivo
             // 
             this.txtArquivo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtArquivo.Location = new System.Drawing.Point(100, 66);
+            this.txtArquivo.Location = new System.Drawing.Point(100, 44);
             this.txtArquivo.Name = "txtArquivo";
             this.txtArquivo.ReadOnly = true;
             this.txtArquivo.Size = new System.Drawing.Size(327, 23);
@@ -137,7 +137,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(353, 97);
+            this.label4.Location = new System.Drawing.Point(353, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 17);
             this.label4.TabIndex = 1;
@@ -146,7 +146,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(118, 97);
+            this.label3.Location = new System.Drawing.Point(118, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 1;
@@ -155,7 +155,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(118, 46);
+            this.label2.Location = new System.Drawing.Point(118, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(208, 17);
             this.label2.TabIndex = 1;
@@ -164,9 +164,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 63);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 44);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(74, 86);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -174,9 +174,9 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(14, 9);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(488, 40);
+            this.label1.Size = new System.Drawing.Size(488, 54);
             this.label1.TabIndex = 1;
             this.label1.Text = "CONFIGURAÇÃO DE BANCO DE DADOS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
