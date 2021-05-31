@@ -25,7 +25,7 @@ namespace Setup
             //Na linha abaixo serve para abrir o formulário
             Formularios.frmErro erro = new Formularios.frmErro();
             erro.lblMensagem.Text = Msg;
-            erro.ShowDialog();
+            erro.Show();
 
             //modal.Dispose();
         }
@@ -191,6 +191,15 @@ namespace Setup
                 Erro("Erro ao tentar abrir o arquivo!");
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public static void ChamaModal(bool Visivel = true)
+        {
+            if (Visivel == true)
+            {
+                Formularios.frmModal modal = new Formularios.frmModal();
+                modal.Show();
+            }           
         }
     }
 }

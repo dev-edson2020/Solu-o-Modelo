@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadPessoa));
             this.label1 = new System.Windows.Forms.Label();
-            this.btnFechar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblBarraInferior = new System.Windows.Forms.Label();
             this.btnUsuario = new System.Windows.Forms.Button();
@@ -137,6 +136,7 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.errorContato = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnFechar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorUsuario)).BeginInit();
@@ -158,28 +158,12 @@
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(-3, -3);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(788, 54);
+            this.label1.Size = new System.Drawing.Size(801, 45);
             this.label1.TabIndex = 2;
             this.label1.Text = "CADASTRO DE PESSOAS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.BackColor = System.Drawing.Color.Black;
-            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(669, 8);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(44, 37);
-            this.btnFechar.TabIndex = 4;
-            this.btnFechar.UseVisualStyleBackColor = false;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // panel1
             // 
@@ -200,7 +184,7 @@
             // 
             this.lblBarraInferior.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBarraInferior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblBarraInferior.Location = new System.Drawing.Point(2, 57);
+            this.lblBarraInferior.Location = new System.Drawing.Point(4, 57);
             this.lblBarraInferior.Name = "lblBarraInferior";
             this.lblBarraInferior.Size = new System.Drawing.Size(187, 5);
             this.lblBarraInferior.TabIndex = 2;
@@ -214,7 +198,7 @@
             this.btnUsuario.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuario.Location = new System.Drawing.Point(592, 10);
+            this.btnUsuario.Location = new System.Drawing.Point(594, 10);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnUsuario.Size = new System.Drawing.Size(189, 49);
@@ -232,7 +216,7 @@
             this.btnContato.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContato.Image = ((System.Drawing.Image)(resources.GetObject("btnContato.Image")));
             this.btnContato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContato.Location = new System.Drawing.Point(395, 10);
+            this.btnContato.Location = new System.Drawing.Point(397, 10);
             this.btnContato.Name = "btnContato";
             this.btnContato.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnContato.Size = new System.Drawing.Size(189, 49);
@@ -250,7 +234,7 @@
             this.btnEndereco.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEndereco.Image = ((System.Drawing.Image)(resources.GetObject("btnEndereco.Image")));
             this.btnEndereco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEndereco.Location = new System.Drawing.Point(198, 10);
+            this.btnEndereco.Location = new System.Drawing.Point(200, 10);
             this.btnEndereco.Name = "btnEndereco";
             this.btnEndereco.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnEndereco.Size = new System.Drawing.Size(189, 49);
@@ -267,10 +251,10 @@
             this.btnDadosPessoais.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDadosPessoais.Image = ((System.Drawing.Image)(resources.GetObject("btnDadosPessoais.Image")));
             this.btnDadosPessoais.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDadosPessoais.Location = new System.Drawing.Point(-1, 10);
+            this.btnDadosPessoais.Location = new System.Drawing.Point(5, 10);
             this.btnDadosPessoais.Name = "btnDadosPessoais";
             this.btnDadosPessoais.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnDadosPessoais.Size = new System.Drawing.Size(192, 49);
+            this.btnDadosPessoais.Size = new System.Drawing.Size(188, 49);
             this.btnDadosPessoais.TabIndex = 0;
             this.btnDadosPessoais.Text = "  Dados Pessoais";
             this.btnDadosPessoais.UseVisualStyleBackColor = false;
@@ -281,7 +265,7 @@
             this.label9.BackColor = System.Drawing.Color.Gainsboro;
             this.label9.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(-5, 58);
+            this.label9.Location = new System.Drawing.Point(-3, 58);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(801, 1);
             this.label9.TabIndex = 2;
@@ -291,7 +275,7 @@
             this.lblBarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblBarraSuperior.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBarraSuperior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblBarraSuperior.Location = new System.Drawing.Point(1, 7);
+            this.lblBarraSuperior.Location = new System.Drawing.Point(3, 7);
             this.lblBarraSuperior.Name = "lblBarraSuperior";
             this.lblBarraSuperior.Size = new System.Drawing.Size(189, 4);
             this.lblBarraSuperior.TabIndex = 2;
@@ -554,7 +538,7 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(786, 348);
+            this.tabControl1.Size = new System.Drawing.Size(787, 348);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -563,7 +547,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(778, 322);
+            this.tabPage1.Size = new System.Drawing.Size(779, 322);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -876,7 +860,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(778, 322);
+            this.tabPage2.Size = new System.Drawing.Size(779, 322);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -887,7 +871,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(778, 322);
+            this.tabPage3.Size = new System.Drawing.Size(779, 322);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1151,7 +1135,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(778, 322);
+            this.tabPage4.Size = new System.Drawing.Size(779, 322);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1477,6 +1461,22 @@
             // errorContato
             // 
             this.errorContato.ContainerControl = this;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.Black;
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(734, 8);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(44, 37);
+            this.btnFechar.TabIndex = 4;
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // frmCadPessoa
             // 

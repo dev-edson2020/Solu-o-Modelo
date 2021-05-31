@@ -48,6 +48,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -80,6 +81,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -112,6 +114,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -146,6 +149,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -193,14 +197,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="LOGRADOURO">
+                    <Textbox Name="ENDERECO">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!LOGRADOURO.Value</Value>
+                              <Value>=Fields!ENDERECO.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -209,7 +213,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>LOGRADOURO</rd:DefaultName>
+                      <rd:DefaultName>ENDERECO</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -221,6 +225,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -310,9 +315,9 @@
         </TablixRowHierarchy>
         <RepeatRowHeaders>true</RepeatRowHeaders>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.17639cm</Top>
-        <Left>0.26458cm</Left>
-        <Height>1.2cm</Height>
+        <Top>0.14111cm</Top>
+        <Left>0.3175cm</Left>
+        <Height>2.87514cm</Height>
         <Width>18.46792cm</Width>
         <Style>
           <Border>
@@ -321,10 +326,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>0.75in</Height>
+    <Height>1.1875in</Height>
     <Style />
   </Body>
-  <Width>7.375in</Width>
+  <Width>7.39583in</Width>
   <Page>
     <PageHeader>
       <Height>2.09021cm</Height>
@@ -517,8 +522,8 @@
           <DataField>NOME</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="LOGRADOURO">
-          <DataField>LOGRADOURO</DataField>
+        <Field Name="ENDERECO">
+          <DataField>ENDERECO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="CIDADE">

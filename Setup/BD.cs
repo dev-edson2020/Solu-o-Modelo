@@ -44,7 +44,7 @@ namespace Setup
             }
             //}
             //else
-                //return true;
+            //return true;
         }
 
         private static FbConnection Conectar()
@@ -70,7 +70,7 @@ namespace Setup
                 }
                 catch (FbException ex)
                 {
-                    throw new Exception(ex.ToString());       
+                    throw new Exception(ex.ToString());
                 }
                 finally
                 {
@@ -89,6 +89,7 @@ namespace Setup
                     FbCommand cmd = new FbCommand(SQL, ConexaoFB);
                     return cmd.ExecuteNonQuery();
                 }
+                
                 catch (FbException ex)
                 {
                     throw new Exception(ex.ToString());
@@ -248,7 +249,7 @@ namespace Setup
             }
 
             return id;
-        } 
+        }
 
         public static bool Excluir(string Tabela, string id)
         {
@@ -370,8 +371,5 @@ namespace Setup
                 Salvar("LOG_ACESSO", c, v);
             }
         }
-
-       
-
     }
 }

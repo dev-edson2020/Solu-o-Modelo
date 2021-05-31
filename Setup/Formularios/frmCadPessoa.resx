@@ -118,17 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnFechar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAASRJREFUWEft
-        lsEOgjAQRPHHiPpFfoKeOHLzyMnvFGfcZVRiA6UVPPQlm9Bud2aNpbQqFAqFL/R9v0fsfBgNa6nhwzQg
-        dEKQDhHdFGu89o44+fQyIFAj3uk8NRvWWKmoPbUMCDSmI66emoRrrUQ0nkoDQq3picmmuMaWitZTeaCg
-        6YqgAXO2RORtZgDCk7+ac5YSv2lmAAbBfcFnmxKz91sSMBq/OWfExR7FOs0QmA1nS4jo4yEZmLKp29P+
-        k0UHaDI0dfMx6zdEQzcOse5fRkPzFdzQ22xqGpmf2O61p4H5iO0ORgqbvggaMWdLRN6mKGi6YruPK4T+
-        5/oBgfEFLXqTomb8RiZf0HSF9akoUJfvCjsAoQOFfRgNaxFHHxYKhcKLqnoAWLng7e34v1MAAAAASUVO
-        RK5CYII=
-</value>
-  </data>
   <data name="btnUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABuBJREFUWEet
@@ -296,24 +285,17 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>32</value>
   </metadata>
-  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>135, 17</value>
-  </metadata>
-  <metadata name="CONTATO_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TIPO_CONTATO.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Contato.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Principal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="obs.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="btnFechar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAASRJREFUWEft
+        lsEOgjAQRPHHiPpFfoKeOHLzyMnvFGfcZVRiA6UVPPQlm9Bud2aNpbQqFAqFL/R9v0fsfBgNa6nhwzQg
+        dEKQDhHdFGu89o44+fQyIFAj3uk8NRvWWKmoPbUMCDSmI66emoRrrUQ0nkoDQq3picmmuMaWitZTeaCg
+        6YqgAXO2RORtZgDCk7+ac5YSv2lmAAbBfcFnmxKz91sSMBq/OWfExR7FOs0QmA1nS4jo4yEZmLKp29P+
+        k0UHaDI0dfMx6zdEQzcOse5fRkPzFdzQ22xqGpmf2O61p4H5iO0ORgqbvggaMWdLRN6mKGi6YruPK4T+
+        5/oBgfEFLXqTomb8RiZf0HSF9akoUJfvCjsAoQOFfRgNaxFHHxYKhcKLqnoAWLng7e34v1MAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
   <metadata name="CONTATO_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -341,6 +323,9 @@
         SUVORK5CYII=
 </value>
   </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>135, 17</value>
+  </metadata>
   <metadata name="errorContato.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>265, 17</value>
   </metadata>

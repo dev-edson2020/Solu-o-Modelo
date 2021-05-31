@@ -281,7 +281,7 @@ namespace Setup {
             
             private global::System.Data.DataColumn columnNOME;
             
-            private global::System.Data.DataColumn columnLOGRADOURO;
+            private global::System.Data.DataColumn columnENDERECO;
             
             private global::System.Data.DataColumn columnCIDADE;
             
@@ -330,9 +330,9 @@ namespace Setup {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn LOGRADOUROColumn {
+            public global::System.Data.DataColumn ENDERECOColumn {
                 get {
-                    return this.columnLOGRADOURO;
+                    return this.columnENDERECO;
                 }
             }
             
@@ -389,11 +389,11 @@ namespace Setup {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PessoaRelatorioRow AddPessoaRelatorioRow(string NOME, string LOGRADOURO, string CIDADE, string VALOR) {
+            public PessoaRelatorioRow AddPessoaRelatorioRow(string NOME, string ENDERECO, string CIDADE, string VALOR) {
                 PessoaRelatorioRow rowPessoaRelatorioRow = ((PessoaRelatorioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NOME,
-                        LOGRADOURO,
+                        ENDERECO,
                         CIDADE,
                         VALOR};
                 rowPessoaRelatorioRow.ItemArray = columnValuesArray;
@@ -419,7 +419,7 @@ namespace Setup {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnNOME = base.Columns["NOME"];
-                this.columnLOGRADOURO = base.Columns["LOGRADOURO"];
+                this.columnENDERECO = base.Columns["ENDERECO"];
                 this.columnCIDADE = base.Columns["CIDADE"];
                 this.columnVALOR = base.Columns["VALOR"];
             }
@@ -429,8 +429,8 @@ namespace Setup {
             private void InitClass() {
                 this.columnNOME = new global::System.Data.DataColumn("NOME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNOME);
-                this.columnLOGRADOURO = new global::System.Data.DataColumn("LOGRADOURO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLOGRADOURO);
+                this.columnENDERECO = new global::System.Data.DataColumn("ENDERECO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnENDERECO);
                 this.columnCIDADE = new global::System.Data.DataColumn("CIDADE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCIDADE);
                 this.columnVALOR = new global::System.Data.DataColumn("VALOR", typeof(string), null, global::System.Data.MappingType.Element);
@@ -593,17 +593,17 @@ namespace Setup {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string LOGRADOURO {
+            public string ENDERECO {
                 get {
                     try {
-                        return ((string)(this[this.tablePessoaRelatorio.LOGRADOUROColumn]));
+                        return ((string)(this[this.tablePessoaRelatorio.ENDERECOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'LOGRADOURO\' na tabela \'PessoaRelatorio\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'ENDERECO\' na tabela \'PessoaRelatorio\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePessoaRelatorio.LOGRADOUROColumn] = value;
+                    this[this.tablePessoaRelatorio.ENDERECOColumn] = value;
                 }
             }
             
@@ -653,14 +653,14 @@ namespace Setup {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsLOGRADOURONull() {
-                return this.IsNull(this.tablePessoaRelatorio.LOGRADOUROColumn);
+            public bool IsENDERECONull() {
+                return this.IsNull(this.tablePessoaRelatorio.ENDERECOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetLOGRADOURONull() {
-                this[this.tablePessoaRelatorio.LOGRADOUROColumn] = global::System.Convert.DBNull;
+            public void SetENDERECONull() {
+                this[this.tablePessoaRelatorio.ENDERECOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

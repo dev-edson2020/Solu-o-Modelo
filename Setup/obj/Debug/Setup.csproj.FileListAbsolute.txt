@@ -129,6 +129,7 @@ C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\bin\Debug\pt\Microsoft.Report
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmCadEstado.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmCadPessoa.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmConfigDados.resources
@@ -143,10 +144,11 @@ C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.f
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmSplash.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Properties.Resources.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.csproj.GenerateResource.cache
+C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\RdlCompile.cache
+C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\RdlCompile.compiled
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.csproj.CoreCompileInputs.cache
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.csproj.CopyComplete
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.exe
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.pdb
-C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
-C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\RdlCompile.cache
-C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\RdlCompile.compiled
+C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmMenuProduto.resources
+C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmCadProduto.resources

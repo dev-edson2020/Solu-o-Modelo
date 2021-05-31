@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -31,12 +33,15 @@ namespace Setup.Formularios
             //BuscaPessoa();
 
             DashBoardStatus();
-            DashBoardAniversario();          
+            DashBoardAniversario();
+            this.rpFicha.RefreshReport();
         }
 
         private void btDashBoard_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
+            DashBoardStatus();
+            DashBoardAniversario();
         }
 
         private void btBuscar_Click(object sender, EventArgs e)
@@ -420,16 +425,25 @@ namespace Setup.Formularios
             string sql = "SELECT CASE a.ATIVO WHEN 'S' THEN 'Ativo' WHEN 'N' THEN 'Inativo' END AS ATIVO, COUNT(*) AS TOTAL FROM PESSOA a GROUP BY a.ATIVO";
              graficoSituacao.DataSource = BD.Buscar(sql);
         }
+
+        private void GraficoNiverMes()
+        {
+            string Mes = DateTime.Now.ToString("MM");
+
+            lblTituloAniversario.Text = "ANIVERSÁRIANTES DO MÊS ATUAL";
+
+            string sql = "SELECT EXTRACT(DAY FROM p.DATA_NASC) AS MES, ";
+            sql += "COUNT(*) AS Aniversariantes FROM PESSOA p ";
+            sql += "WHERE EXTRACT(MONTH FROM p.DATA_NASC) = " + Mes;
+            sql += " GROUP BY EXTRACT(DAY FROM p.DATA_NASC)";
+
+            graficoAniversario.DataSource = BD.Buscar(sql);
+            graficoAniversario.DataBind();
+
+        }
         private void DashBoardAniversario()
         {
-            string PrimeiroDia = "01/01/" + DateTime.Now.ToString("yyyy");
-
-            string UltimoDia = Convert.ToDateTime(PrimeiroDia).AddYears(1).AddDays(-1).ToString("dd/MM/yyyy");
-
-            lblTituloAniversario.Text = "ANIVERSÁRIANTES POR MÊS:  " + PrimeiroDia +  " até " + UltimoDia;
-
-            PrimeiroDia = PrimeiroDia.Replace("/", ".");
-            UltimoDia = UltimoDia.Replace("/", ".");
+            lblTituloAniversario.Text = "ANIVERSÁRIANTES POR MES";
 
             string sql = "SELECT CASE EXTRACT(MONTH FROM p.DATA_NASC) ";
             sql += "WHEN 1 THEN 'Jan' ";
@@ -455,15 +469,24 @@ namespace Setup.Formularios
 
         private void btRelatorio_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT p.NOME, e.LOGRADOURO, c.CIDADE, co.VALOR FROM PESSOA p ";
+            MenuRelatorio.Show(btRelatorio, new Point(-150, 20));
+        }
+
+        private void ExportarRelatorio(string Tipo)
+        {
+            /*string sql = "SELECT p.NOME, e.LOGRADOURO, c.CIDADE, co.VALOR FROM PESSOA p ";
             sql += "INNER JOIN ENDERECO e ON e.PESSOA_ID = p.PESSOA_ID ";
             sql += "INNER JOIN CIDADE c ON C.CIDADE_ID = e.CIDADE_ID ";
             sql += "INNER JOIN CONTATO co ON co.PESSOA_ID = p.PESSOA_ID ";
             sql += "WHERE co.PRINCIPAL = 'S' ";
-            sql += "order by p.NOME";
+            sql += "order by p.NOME";*/
 
-            bsRelatorioPessoa.DataSource = BD.Buscar(sql);
-            Geral.ImprimirPDF(rpRelatorio, "PessoaRelatorio");
+            bsRelatorioPessoa.DataSource = dgPessoa.DataSource;
+
+            if (Tipo == "Excel")
+                Geral.ImprimirExcel(rpRelatorio, "RelatorioPessoa");
+            else
+                Geral.ImprimirPDF(rpRelatorio, "RelatorioPessoa");
         }
 
         private void btAdicionar_MouseMove(object sender, MouseEventArgs e)
@@ -500,5 +523,134 @@ namespace Setup.Formularios
         {
             lblBarraMenu.Left = btBuscar.Left;
         }
+
+        private void btAdicionar_Click(object sender, EventArgs e)
+        {
+            Formularios.frmModal modal = new frmModal();
+            modal.Show();
+
+            frmCadPessoa frm = new frmCadPessoa();
+            frm.ShowDialog();
+
+            modal.Close();
+        }
+
+        private void btFicha_Click(object sender, EventArgs e)
+        {
+            ExportarFicha();
+        }
+
+        private void ExportarFicha()
+        {
+            if (dgPessoa.RowCount == 0)
+            {
+                Geral.Erro("Não há pessoa selecionada!");
+                return;
+            }
+
+            ReportParameterCollection p = new ReportParameterCollection();
+
+            p.Add(new ReportParameter("id", dgPessoa.CurrentRow.Cells["PESSOA_ID"].Value.ToString()));
+            p.Add(new ReportParameter("nome", dgPessoa.CurrentRow.Cells["NOME"].Value.ToString()));
+            p.Add(new ReportParameter("codigo", dgPessoa.CurrentRow.Cells["CODIGO"].Value.ToString()));
+
+            if (dgPessoa.CurrentRow.Cells["SEXO"].Value.ToString() == "F")
+                p.Add(new ReportParameter("sexo", "Feminino"));
+            else
+                p.Add(new ReportParameter("sexo", "Masculino"));
+
+            if (dgPessoa.CurrentRow.Cells["CPF"].Value.ToString() != "")
+                p.Add(new ReportParameter("documento", dgPessoa.CurrentRow.Cells["CPF"].Value.ToString()));
+            else
+                p.Add(new ReportParameter("documento", dgPessoa.CurrentRow.Cells["CNPJ"].Value.ToString()));
+
+            string data = Convert.ToDateTime(dgPessoa.CurrentRow.Cells["DATA_NASC"].Value.ToString()).ToShortDateString();
+
+            p.Add(new ReportParameter("nasc", data));
+
+            p.Add(new ReportParameter("codigo", dgPessoa.CurrentRow.Cells["CODIGO"].Value.ToString()));
+
+
+            string sql = "SELECT a.CEP, a.LOGRADOURO, a.COMPLEMENTO, a.NUMERO, b.BAIRRO, c.CIDADE, e.ESTADO ";
+            sql += "FROM ENDERECO a ";
+            sql += "INNER JOIN BAIRRO b ON b.BAIRRO_ID = a.BAIRRO_ID ";
+            sql += "INNER JOIN CIDADE c ON c.CIDADE_ID = a.CIDADE_ID ";
+            sql += "INNER JOIN ESTADO e ON e.SIGLA = a.ESTADO ";
+            sql += "WHERE a.PESSOA_ID = " + dgPessoa.CurrentRow.Cells["PESSOA_ID"].Value.ToString();
+
+            DataTable dt = BD.Buscar(sql);
+
+            p.Add(new ReportParameter("cep", dt.Rows[0]["CEP"].ToString()));
+            p.Add(new ReportParameter("numero", dt.Rows[0]["NUMERO"].ToString()));
+            p.Add(new ReportParameter("logradouro", dt.Rows[0]["LOGRADOURO"].ToString()));
+            p.Add(new ReportParameter("complemento", dt.Rows[0]["COMPLEMENTO"].ToString()));
+            p.Add(new ReportParameter("Bairro", dt.Rows[0]["BAIRRO"].ToString()));
+            p.Add(new ReportParameter("cidade", dt.Rows[0]["CIDADE"].ToString()));
+            p.Add(new ReportParameter("estado", dt.Rows[0]["ESTADO"].ToString()));
+
+            sql = "SELECT p.CADASTRO FROM PESSOA p WHERE p.PESSOA_ID = " + dgPessoa.CurrentRow.Cells["PESSOA_ID"].Value.ToString();
+            dt = BD.Buscar(sql);
+
+            p.Add(new ReportParameter("cadastro", Convert.ToDateTime(dt.Rows[0]["CADASTRO"].ToString()).ToShortDateString()));
+            rpFicha.LocalReport.SetParameters(p);
+
+
+            sql = "SELECT FIRST 8 a.TIPO, a.VALOR FROM CONTATO a WHERE a.PESSOA_ID = " + dgPessoa.CurrentRow.Cells["PESSOA_ID"].Value.ToString();
+            dt = BD.Buscar(sql);
+
+            ReportDataSource dados = new ReportDataSource("Base", dt as DataTable);
+            this.rpFicha.LocalReport.DataSources.Clear();
+            this.rpFicha.LocalReport.DataSources.Add(dados);
+
+            Geral.ImprimirPDF(rpFicha, "FichaPessoa");
+        }
+
+        private void ExportarPDF_Click(object sender, EventArgs e)
+        {
+            ExportarRelatorio("PDF");
+        }
+
+        private void ExportarExcel_Click(object sender, EventArgs e)
+        {
+            ExportarRelatorio("Exel");
+        }
+
+        private void NiverMes_Click(object sender, EventArgs e)
+        {
+            GraficoNiverMes();
+        }
+
+        private void NiverAno_Click(object sender, EventArgs e)
+        {
+            DashBoardAniversario();
+        }
+
+        private void exportarExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportarRelatorio("Exel");
+        }
+
+        private void exportarPDFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportarRelatorio("PDF");
+        }
+
+        private void fichaDeCadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportarFicha();
+        }
+
+        private void dashBoardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabPage1.Show();
+        }
+
+        private void btBuscar_Click_1(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+            btDashBoard.Enabled = true;
+            btBuscar.Enabled = false;
+        }
     }
 }
+

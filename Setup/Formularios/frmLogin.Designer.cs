@@ -184,7 +184,7 @@
             // toolTip1
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "FrameWork Edivam Cabral";
+            this.toolTip1.ToolTipTitle = "FrameWork Edson Meira";
             // 
             // errorProvider1
             // 

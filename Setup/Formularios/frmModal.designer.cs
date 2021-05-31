@@ -40,7 +40,7 @@
             this.Name = "frmModal";
             this.Opacity = 0.3D;
             this.Text = "frmModal";
-            this.TransparencyKey = System.Drawing.Color.Blue;
+            this.TransparencyKey = System.Drawing.Color.MidnightBlue;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 

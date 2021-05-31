@@ -56,7 +56,7 @@ namespace Setup.Formularios
         private void button1_MouseMove(object sender, MouseEventArgs e)
         {
             lblBarra.Visible = true;
-            lblBarra.Location = new Point(12, button1.Location.Y);
+            lblBarra.Location = new Point(12, btProduto.Location.Y);
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -121,10 +121,31 @@ namespace Setup.Formularios
             frmMenuPessoa frm = new frmMenuPessoa();
             frm.ShowDialog();
 
-            modal.Close();
-          
+            modal.Dispose();
+
         }
-      
+
+        private void btProduto_Click(object sender, EventArgs e)
+        {
+            frmModal modal = new frmModal();
+            modal.Show();
+
+            frmMenuProduto frm = new frmMenuProduto();
+            frm.ShowDialog();
+
+            modal.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btProduto_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblBarra.Visible = true;
+            lblBarra.Location = new Point(12, btProduto.Location.Y);
+        }
     }   
 }
 

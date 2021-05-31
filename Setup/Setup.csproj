@@ -127,6 +127,12 @@
     <Compile Include="Formularios\frmCadPessoa.designer.cs">
       <DependentUpon>frmCadPessoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmCadProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCadProduto.Designer.cs">
+      <DependentUpon>frmCadProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmConfigDados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,12 @@
     </Compile>
     <Compile Include="Formularios\frmMenuPessoa.Designer.cs">
       <DependentUpon>frmMenuPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMenuProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMenuProduto.Designer.cs">
+      <DependentUpon>frmMenuProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmModal.cs">
       <SubType>Form</SubType>
@@ -197,6 +209,9 @@
     <EmbeddedResource Include="Formularios\frmCadPessoa.resx">
       <DependentUpon>frmCadPessoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCadProduto.resx">
+      <DependentUpon>frmCadProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConfigDados.resx">
       <DependentUpon>frmConfigDados.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMenuPessoa.resx">
       <DependentUpon>frmMenuPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmMenuProduto.resx">
+      <DependentUpon>frmMenuProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModal.resx">
       <DependentUpon>frmModal.cs</DependentUpon>
@@ -237,6 +255,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Relatorios\PessoaFicha.rdlc" />
     <EmbeddedResource Include="Relatorios\PessoaRelatorio.rdlc" />
     <None Include="DS.xsc">
       <DependentUpon>DS.xsd</DependentUpon>
