@@ -63,6 +63,46 @@ namespace Setup.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_person_white_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_person_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_person_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_person_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_person_white_24dp1 {
+            get {
+                object obj = ResourceManager.GetObject("baseline_person_white_24dp1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clientes {
+            get {
+                object obj = ResourceManager.GetObject("clientes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap controle_estoque {
             get {
                 object obj = ResourceManager.GetObject("controle-estoque", resourceCulture);
@@ -126,6 +166,26 @@ namespace Setup.Properties {
         internal static System.Drawing.Bitmap pessoa_32 {
             get {
                 object obj = ResourceManager.GetObject("pessoa 32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap round_west_black_24dp {
+            get {
+                object obj = ResourceManager.GetObject("round_west_black_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap round_west_black_36dp {
+            get {
+                object obj = ResourceManager.GetObject("round_west_black_36dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

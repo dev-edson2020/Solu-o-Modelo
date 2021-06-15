@@ -89,7 +89,7 @@ namespace Setup.Formularios
         }
 
         private void frmCadPessoa_Load(object sender, EventArgs e)
-        {
+        {            
             MudarPanel(0);
             CarregarCidades();
             CarregarBairros();

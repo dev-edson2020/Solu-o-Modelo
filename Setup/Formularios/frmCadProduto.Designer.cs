@@ -32,16 +32,6 @@ namespace Setup.Formularios
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadProduto));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cbProduto = new Setup.Controles.cbCombo();
-            this.txtCodigo = new Setup.Controles.txt();
-            this.txtCodBarra = new Setup.Controles.txt();
-            this.txtValidade = new Setup.Controles.txtDataLeave();
-            this.txtCusto = new Setup.Controles.Moeda();
-            this.txtReajuste = new Setup.Controles.txtNumero();
-            this.txtVenda = new Setup.Controles.Moeda();
-            this.txtEstoque = new Setup.Controles.txtNumero();
-            this.txtEstMinimo = new Setup.Controles.txtNumero();
-            this.txtCadastro = new Setup.Controles.txt();
             this.CkAtivo = new System.Windows.Forms.CheckBox();
             this.btNovo = new System.Windows.Forms.Button();
             this.btSalvar = new System.Windows.Forms.Button();
@@ -52,6 +42,16 @@ namespace Setup.Formularios
             this.BotaoAnterior = new System.Windows.Forms.Button();
             this.BotaoPrimeira = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbProduto = new Setup.Controles.cbCombo();
+            this.txtCodigo = new Setup.Controles.txt();
+            this.txtCodBarra = new Setup.Controles.txt();
+            this.txtValidade = new Setup.Controles.txtDataLeave();
+            this.txtCusto = new Setup.Controles.Moeda();
+            this.txtReajuste = new Setup.Controles.txtNumero();
+            this.txtVenda = new Setup.Controles.Moeda();
+            this.txtEstoque = new Setup.Controles.txtNumero();
+            this.txtEstMinimo = new Setup.Controles.txtNumero();
+            this.txtCadastro = new Setup.Controles.txt();
             this.FotoProduto = new System.Windows.Forms.PictureBox();
             this.txtFotoId = new Setup.Controles.txt();
             this.txtId = new Setup.Controles.txt();
@@ -75,6 +75,160 @@ namespace Setup.Formularios
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // CkAtivo
+            // 
+            this.CkAtivo.AutoSize = true;
+            this.CkAtivo.Checked = true;
+            this.CkAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CkAtivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CkAtivo.Location = new System.Drawing.Point(283, 236);
+            this.CkAtivo.Name = "CkAtivo";
+            this.CkAtivo.Size = new System.Drawing.Size(50, 17);
+            this.CkAtivo.TabIndex = 14;
+            this.CkAtivo.Text = "Ativo";
+            this.CkAtivo.UseVisualStyleBackColor = true;
+            // 
+            // btNovo
+            // 
+            this.btNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btNovo.FlatAppearance.BorderSize = 0;
+            this.btNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btNovo.ForeColor = System.Drawing.Color.White;
+            this.btNovo.Location = new System.Drawing.Point(274, 291);
+            this.btNovo.Name = "btNovo";
+            this.btNovo.Size = new System.Drawing.Size(122, 37);
+            this.btNovo.TabIndex = 13;
+            this.btNovo.Text = "Novo Registro";
+            this.btNovo.UseVisualStyleBackColor = false;
+            this.btNovo.Click += new System.EventHandler(this.btNovo_Click);
+            // 
+            // btSalvar
+            // 
+            this.btSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btSalvar.FlatAppearance.BorderSize = 0;
+            this.btSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSalvar.ForeColor = System.Drawing.Color.White;
+            this.btSalvar.Location = new System.Drawing.Point(119, 291);
+            this.btSalvar.Name = "btSalvar";
+            this.btSalvar.Size = new System.Drawing.Size(122, 37);
+            this.btSalvar.TabIndex = 13;
+            this.btSalvar.Text = "Salvar";
+            this.btSalvar.UseVisualStyleBackColor = false;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
+            // 
+            // BotaoAddFoto
+            // 
+            this.BotaoAddFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BotaoAddFoto.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoAddFoto.Location = new System.Drawing.Point(693, 268);
+            this.BotaoAddFoto.Name = "BotaoAddFoto";
+            this.BotaoAddFoto.Size = new System.Drawing.Size(28, 23);
+            this.BotaoAddFoto.TabIndex = 12;
+            this.BotaoAddFoto.Text = "+";
+            this.BotaoAddFoto.UseVisualStyleBackColor = false;
+            this.BotaoAddFoto.Click += new System.EventHandler(this.BotaoAddFoto_Click);
+            // 
+            // BotaoUltima
+            // 
+            this.BotaoUltima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BotaoUltima.Enabled = false;
+            this.BotaoUltima.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoUltima.Location = new System.Drawing.Point(650, 268);
+            this.BotaoUltima.Name = "BotaoUltima";
+            this.BotaoUltima.Size = new System.Drawing.Size(35, 23);
+            this.BotaoUltima.TabIndex = 12;
+            this.BotaoUltima.Text = ">>";
+            this.BotaoUltima.UseVisualStyleBackColor = false;
+            // 
+            // BotaoProxima
+            // 
+            this.BotaoProxima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BotaoProxima.Enabled = false;
+            this.BotaoProxima.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoProxima.Location = new System.Drawing.Point(609, 268);
+            this.BotaoProxima.Name = "BotaoProxima";
+            this.BotaoProxima.Size = new System.Drawing.Size(35, 23);
+            this.BotaoProxima.TabIndex = 12;
+            this.BotaoProxima.Text = ">";
+            this.BotaoProxima.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(800, 26);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "CADASTRO DE PRODUTOS";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BotaoAnterior
+            // 
+            this.BotaoAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BotaoAnterior.Enabled = false;
+            this.BotaoAnterior.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoAnterior.Location = new System.Drawing.Point(568, 268);
+            this.BotaoAnterior.Name = "BotaoAnterior";
+            this.BotaoAnterior.Size = new System.Drawing.Size(35, 23);
+            this.BotaoAnterior.TabIndex = 12;
+            this.BotaoAnterior.Text = "<";
+            this.BotaoAnterior.UseVisualStyleBackColor = false;
+            // 
+            // BotaoPrimeira
+            // 
+            this.BotaoPrimeira.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BotaoPrimeira.Enabled = false;
+            this.BotaoPrimeira.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoPrimeira.Location = new System.Drawing.Point(527, 268);
+            this.BotaoPrimeira.Name = "BotaoPrimeira";
+            this.BotaoPrimeira.Size = new System.Drawing.Size(35, 23);
+            this.BotaoPrimeira.TabIndex = 12;
+            this.BotaoPrimeira.Text = "<<";
+            this.BotaoPrimeira.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbProduto);
+            this.panel1.Controls.Add(this.txtCodigo);
+            this.panel1.Controls.Add(this.txtCodBarra);
+            this.panel1.Controls.Add(this.txtValidade);
+            this.panel1.Controls.Add(this.txtCusto);
+            this.panel1.Controls.Add(this.txtReajuste);
+            this.panel1.Controls.Add(this.txtVenda);
+            this.panel1.Controls.Add(this.txtEstoque);
+            this.panel1.Controls.Add(this.txtEstMinimo);
+            this.panel1.Controls.Add(this.txtCadastro);
+            this.panel1.Controls.Add(this.CkAtivo);
+            this.panel1.Controls.Add(this.btNovo);
+            this.panel1.Controls.Add(this.btSalvar);
+            this.panel1.Controls.Add(this.BotaoAddFoto);
+            this.panel1.Controls.Add(this.BotaoUltima);
+            this.panel1.Controls.Add(this.BotaoProxima);
+            this.panel1.Controls.Add(this.BotaoAnterior);
+            this.panel1.Controls.Add(this.BotaoPrimeira);
+            this.panel1.Controls.Add(this.FotoProduto);
+            this.panel1.Controls.Add(this.txtFotoId);
+            this.panel1.Controls.Add(this.txtId);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(28, 77);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(745, 333);
+            this.panel1.TabIndex = 7;
             // 
             // cbProduto
             // 
@@ -135,6 +289,7 @@ namespace Setup.Formularios
             this.txtCusto.Size = new System.Drawing.Size(100, 23);
             this.txtCusto.TabIndex = 5;
             this.txtCusto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCusto.TextChanged += new System.EventHandler(this.txtCusto_TextChanged);
             // 
             // txtReajuste
             // 
@@ -145,6 +300,7 @@ namespace Setup.Formularios
             this.txtReajuste.Size = new System.Drawing.Size(100, 23);
             this.txtReajuste.TabIndex = 6;
             this.txtReajuste.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtReajuste.TextChanged += new System.EventHandler(this.txtReajuste_TextChanged);
             // 
             // txtVenda
             // 
@@ -186,160 +342,12 @@ namespace Setup.Formularios
             this.txtCadastro.Size = new System.Drawing.Size(100, 23);
             this.txtCadastro.TabIndex = 10;
             // 
-            // CkAtivo
-            // 
-            this.CkAtivo.AutoSize = true;
-            this.CkAtivo.Checked = true;
-            this.CkAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CkAtivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CkAtivo.Location = new System.Drawing.Point(283, 236);
-            this.CkAtivo.Name = "CkAtivo";
-            this.CkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.CkAtivo.TabIndex = 14;
-            this.CkAtivo.Text = "Ativo";
-            this.CkAtivo.UseVisualStyleBackColor = true;
-            // 
-            // btNovo
-            // 
-            this.btNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btNovo.FlatAppearance.BorderSize = 0;
-            this.btNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNovo.ForeColor = System.Drawing.Color.White;
-            this.btNovo.Location = new System.Drawing.Point(274, 291);
-            this.btNovo.Name = "btNovo";
-            this.btNovo.Size = new System.Drawing.Size(122, 37);
-            this.btNovo.TabIndex = 13;
-            this.btNovo.Text = "Novo Registro";
-            this.btNovo.UseVisualStyleBackColor = false;
-            // 
-            // btSalvar
-            // 
-            this.btSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btSalvar.FlatAppearance.BorderSize = 0;
-            this.btSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSalvar.ForeColor = System.Drawing.Color.White;
-            this.btSalvar.Location = new System.Drawing.Point(119, 291);
-            this.btSalvar.Name = "btSalvar";
-            this.btSalvar.Size = new System.Drawing.Size(122, 37);
-            this.btSalvar.TabIndex = 13;
-            this.btSalvar.Text = "Salvar";
-            this.btSalvar.UseVisualStyleBackColor = false;
-            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
-            // 
-            // BotaoAddFoto
-            // 
-            this.BotaoAddFoto.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotaoAddFoto.Location = new System.Drawing.Point(693, 302);
-            this.BotaoAddFoto.Name = "BotaoAddFoto";
-            this.BotaoAddFoto.Size = new System.Drawing.Size(19, 23);
-            this.BotaoAddFoto.TabIndex = 12;
-            this.BotaoAddFoto.Text = "+";
-            this.BotaoAddFoto.UseVisualStyleBackColor = true;
-            this.BotaoAddFoto.Click += new System.EventHandler(this.BotaoAddFoto_Click);
-            // 
-            // BotaoUltima
-            // 
-            this.BotaoUltima.Enabled = false;
-            this.BotaoUltima.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotaoUltima.Location = new System.Drawing.Point(650, 302);
-            this.BotaoUltima.Name = "BotaoUltima";
-            this.BotaoUltima.Size = new System.Drawing.Size(35, 23);
-            this.BotaoUltima.TabIndex = 12;
-            this.BotaoUltima.Text = ">>";
-            this.BotaoUltima.UseVisualStyleBackColor = true;
-            // 
-            // BotaoProxima
-            // 
-            this.BotaoProxima.Enabled = false;
-            this.BotaoProxima.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotaoProxima.Location = new System.Drawing.Point(609, 302);
-            this.BotaoProxima.Name = "BotaoProxima";
-            this.BotaoProxima.Size = new System.Drawing.Size(35, 23);
-            this.BotaoProxima.TabIndex = 12;
-            this.BotaoProxima.Text = ">";
-            this.BotaoProxima.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Black;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label12.Location = new System.Drawing.Point(-1, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(801, 45);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "CADASTRO DE PRODUTOS";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // BotaoAnterior
-            // 
-            this.BotaoAnterior.Enabled = false;
-            this.BotaoAnterior.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotaoAnterior.Location = new System.Drawing.Point(568, 302);
-            this.BotaoAnterior.Name = "BotaoAnterior";
-            this.BotaoAnterior.Size = new System.Drawing.Size(35, 23);
-            this.BotaoAnterior.TabIndex = 12;
-            this.BotaoAnterior.Text = "<";
-            this.BotaoAnterior.UseVisualStyleBackColor = true;
-            // 
-            // BotaoPrimeira
-            // 
-            this.BotaoPrimeira.Enabled = false;
-            this.BotaoPrimeira.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotaoPrimeira.Location = new System.Drawing.Point(527, 302);
-            this.BotaoPrimeira.Name = "BotaoPrimeira";
-            this.BotaoPrimeira.Size = new System.Drawing.Size(35, 23);
-            this.BotaoPrimeira.TabIndex = 12;
-            this.BotaoPrimeira.Text = "<<";
-            this.BotaoPrimeira.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cbProduto);
-            this.panel1.Controls.Add(this.txtCodigo);
-            this.panel1.Controls.Add(this.txtCodBarra);
-            this.panel1.Controls.Add(this.txtValidade);
-            this.panel1.Controls.Add(this.txtCusto);
-            this.panel1.Controls.Add(this.txtReajuste);
-            this.panel1.Controls.Add(this.txtVenda);
-            this.panel1.Controls.Add(this.txtEstoque);
-            this.panel1.Controls.Add(this.txtEstMinimo);
-            this.panel1.Controls.Add(this.txtCadastro);
-            this.panel1.Controls.Add(this.CkAtivo);
-            this.panel1.Controls.Add(this.btNovo);
-            this.panel1.Controls.Add(this.btSalvar);
-            this.panel1.Controls.Add(this.BotaoAddFoto);
-            this.panel1.Controls.Add(this.BotaoUltima);
-            this.panel1.Controls.Add(this.BotaoProxima);
-            this.panel1.Controls.Add(this.BotaoAnterior);
-            this.panel1.Controls.Add(this.BotaoPrimeira);
-            this.panel1.Controls.Add(this.FotoProduto);
-            this.panel1.Controls.Add(this.txtFotoId);
-            this.panel1.Controls.Add(this.txtId);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(29, 88);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(745, 333);
-            this.panel1.TabIndex = 7;
-            // 
             // FotoProduto
             // 
             this.FotoProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FotoProduto.Location = new System.Drawing.Point(527, 35);
+            this.FotoProduto.Location = new System.Drawing.Point(527, 39);
             this.FotoProduto.Name = "FotoProduto";
-            this.FotoProduto.Size = new System.Drawing.Size(183, 224);
+            this.FotoProduto.Size = new System.Drawing.Size(194, 224);
             this.FotoProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.FotoProduto.TabIndex = 11;
             this.FotoProduto.TabStop = false;
@@ -349,7 +357,7 @@ namespace Setup.Formularios
             this.txtFotoId.BackColor = System.Drawing.Color.Yellow;
             this.txtFotoId.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFotoId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtFotoId.Location = new System.Drawing.Point(650, 9);
+            this.txtFotoId.Location = new System.Drawing.Point(652, 10);
             this.txtFotoId.Name = "txtFotoId";
             this.txtFotoId.ReadOnly = true;
             this.txtFotoId.Size = new System.Drawing.Size(60, 23);
@@ -469,15 +477,15 @@ namespace Setup.Formularios
             // btnFechar
             // 
             this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.BackColor = System.Drawing.Color.Black;
+            this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(745, 4);
+            this.btnFechar.Location = new System.Drawing.Point(766, -1);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(44, 37);
+            this.btnFechar.Size = new System.Drawing.Size(32, 26);
             this.btnFechar.TabIndex = 9;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -492,10 +500,12 @@ namespace Setup.Formularios
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "frmCadProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadProduto";
             this.Load += new System.EventHandler(this.frmCadProduto_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmCadProduto_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

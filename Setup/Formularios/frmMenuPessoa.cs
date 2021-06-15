@@ -1,14 +1,15 @@
-﻿using Microsoft.Reporting.WinForms;
-using System;
-using System.Data;
-using System.Drawing;
+﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using Microsoft.Reporting.WinForms;
 
 namespace Setup.Formularios
 {
     public partial class frmMenuPessoa : Form
     {
         private string CriterioPessoa;
+
         public frmMenuPessoa()
         {
             InitializeComponent();
@@ -24,33 +25,81 @@ namespace Setup.Formularios
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void btAdicionar_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblBarraMenu.Left = btAdicionar.Left;
+        }
+
+        private void btAlterar_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblBarraMenu.Left = btAlterar.Left;
+        }
+
+        private void btExcluir_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblBarraMenu.Left = btInativar.Left;
+        }
+
+        private void btRelatorio_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblBarraMenu.Left = btRelatorio.Left;
+        }
+
+        private void btFicha_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblBarraMenu.Left = btFicha.Left;
+        }
+
+        private void btDashBoard_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblBarraMenu.Left = btDashBoard.Left;
+        }
+
+        private void btBuscar_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblBarraMenu.Left = btBuscar.Left;
+        }
+
         private void frmMenuPessoa_Load(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 0;
-            tabControl2.SelectedIndex = 0;
-
             //CriterioPessoa = "";
             //BuscaPessoa();
-
             DashBoardStatus();
             DashBoardAniversario();
-            this.rpFicha.RefreshReport();
+            tabControl1.SelectedIndex = 0;
+            btDashBoard.Enabled = false;               
         }
 
         private void btDashBoard_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 0;
+            tabControl1.SelectedIndex = 1;
             DashBoardStatus();
             DashBoardAniversario();
+
+            btDashBoard.Enabled = false;
+            btBuscar.Enabled = false;
         }
 
         private void btBuscar_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
-        }
-        //Inicio Busca        
 
-        private void BuscaPessoa(bool Msg = false)
+            btDashBoard.Enabled = true;
+            btBuscar.Enabled = false;
+
+        }
+
+        private void btAdicionar_Click(object sender, EventArgs e)
+        {           
+
+            frmCadPessoa frm = new frmCadPessoa();
+            frm.ShowDialog();
+              
+                       
+        }
+
+        //Inicio Buscas
+        private void BuscaPessoa(bool Msg=false)
         {
             string sql = "SELECT a.PESSOA_ID, a.NOME, a.CODIGO, co.VALOR, a.CPF, a.CNPJ, a.SEXO, a.DATA_NASC, e.LOGRADOURO AS ENDERECO, e.CEP, b.BAIRRO, c.CIDADE, es.ESTADO, e.ESTADO AS SIGLA, a.ATIVO ";
             sql += "FROM PESSOA a ";
@@ -71,28 +120,38 @@ namespace Setup.Formularios
 
             if (dgPessoa.RowCount == 0)
                 Geral.Erro("Nenhum registro encontrado!");
+
         }
+
         private void RodapePessoa()
         {
             string sql = "SELECT COUNT(*) FROM PESSOA a WHERE a.ATIVO = 'N'";
-            lblTotalInativos.Text = BD.Buscar(sql).Rows[0][0].ToString() +  "  Pessoas  Inativas";
+            lblTotalInativos.ForeColor = Color.DimGray;
+            lblTotalInativos.TextAlign = ContentAlignment.TopLeft;
+
+            lblTotalInativos.Text = BD.Buscar(sql).Rows[0][0].ToString() + " Pessoas Inativas";
 
             sql = "SELECT COUNT(*) FROM PESSOA a WHERE a.ATIVO = 'S'";
-            lblTotalAtivos.Text = BD.Buscar(sql).Rows[0][0].ToString() +  "  Pessoas  Ativas";
+            lblTotalAtivos.ForeColor = Color.DimGray;
+            
+            lblTotalAtivos.Text = BD.Buscar(sql).Rows[0][0].ToString() + " Pessoas Ativas";
 
             string MesAtual = DateTime.Now.ToString("MM");
 
             sql = "SELECT COUNT(*) FROM PESSOA a WHERE EXTRACT(MONTH FROM a.DATA_NASC) = " + MesAtual;
+            lblAniversariantes.ForeColor = Color.DimGray;
             lblAniversariantes.Text = "Aniversariantes: " + BD.Buscar(sql).Rows[0][0].ToString();
         }
+
 
         private void RodapePessoaErrada()
         {
             string sql = "SELECT COUNT(*) FROM PESSOA a WHERE a.ATIVO = 'N'";
-            lblTotalInativos.Text = BD.Buscar(sql).Rows[0][0].ToString()  +  " Pessoas Inativas";
+            lblTotalInativos.Text = BD.Buscar(sql).Rows[0][0].ToString() + " Pessoas Inativas";
+            
 
             sql = "SELECT COUNT(*) FROM PESSOA a WHERE a.ATIVO = 'S'";
-            lblTotalAtivos.Text = BD.Buscar(sql).Rows[0][0].ToString()  +  " Pessoas Inativas";
+            lblTotalAtivos.Text = BD.Buscar(sql).Rows[0][0].ToString() + " Pessoas Inativas";
 
             DateTime DiaPrimeiro = Convert.ToDateTime("01/" + DateTime.Now.ToString("MM/yyyy"));
             DateTime UltimoDia = DiaPrimeiro.AddMonths(1).AddDays(-1);
@@ -103,10 +162,10 @@ namespace Setup.Formularios
 
         private void ColorirPessoa()
         {
-            foreach (DataGridViewRow  linha in dgPessoa.Rows)
+            foreach (DataGridViewRow linha in dgPessoa.Rows)
             {
-                if(linha.Cells["ATIVO"].Value.ToString() == "N")
-                linha.DefaultCellStyle.ForeColor = Color.Red;
+                if (linha.Cells["ATIVO"].Value.ToString() == "N")
+                    linha.DefaultCellStyle.ForeColor = Color.Red;
             }
         }
 
@@ -115,13 +174,14 @@ namespace Setup.Formularios
             if (btNomeExato.Checked)
                 BuscarPessoaNome();
         }
+
         private void BuscarPessoaNome()
         {
             if (btNomeExato.Checked)
                 CriterioPessoa = "AND a.NOME = '" + txtBuscaNome.Text + "'";
 
             if (btNomeContem.Checked)
-                CriterioPessoa = "AND a.NOME LIKE '%" + txtBuscaNome.Text + "%'";
+                CriterioPessoa = "AND a.NOME CONTAINING '" + txtBuscaNome.Text + "'";
 
             if (btNomeInicio.Checked)
                 CriterioPessoa = "AND a.NOME LIKE '" + txtBuscaNome.Text + "%'";
@@ -150,19 +210,24 @@ namespace Setup.Formularios
                 BuscarPessoaNome();
         }
 
+        private void txtBuscaNome_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
 
         private void opCodigoExato_CheckedChanged(object sender, EventArgs e)
         {
             if (opCodigoExato.Checked)
                 BuscaPessoaCodigo();
         }
+
         private void BuscaPessoaCodigo()
         {
             if (opCodigoExato.Checked)
                 CriterioPessoa = "AND a.CODIGO = '" + txtBuscaCodigo.Text + "'";
 
             if (opCodigoContem.Checked)
-                CriterioPessoa = "AND a.CODIGO CONTAINING  '" + txtBuscaCodigo.Text + "'";
+                CriterioPessoa = "AND a.CODIGO CONTAINING '" + txtBuscaCodigo.Text + "'";
 
             BuscaPessoa();
         }
@@ -179,6 +244,7 @@ namespace Setup.Formularios
             if (opCPFExato.Checked)
                 CPFBusca();
         }
+
         private void CPFBusca()
         {
             if (opCPFExato.Checked)
@@ -201,6 +267,7 @@ namespace Setup.Formularios
             if (opCNPJExato.Checked)
                 CNPJBusca();
         }
+
         private void CNPJBusca()
         {
             if (opCNPJExato.Checked)
@@ -208,6 +275,8 @@ namespace Setup.Formularios
 
             if (opCNPJContem.Checked)
                 CriterioPessoa = "AND a.CNPJ CONTAINING '" + txtCNPJBusca.Text + "'";
+
+            BuscaPessoa();
         }
 
         private void opCNPJContem_CheckedChanged(object sender, EventArgs e)
@@ -226,6 +295,16 @@ namespace Setup.Formularios
             CNPJBusca();
         }
 
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void opMasculino_CheckedChanged(object sender, EventArgs e)
         {
             if (opMasculino.Checked)
@@ -233,6 +312,7 @@ namespace Setup.Formularios
                 CriterioPessoa = "AND a.SEXO = 'M'";
                 BuscaPessoa();
             }
+
         }
 
         private void opFeminino_CheckedChanged(object sender, EventArgs e)
@@ -257,20 +337,28 @@ namespace Setup.Formularios
         {
             BuscaDataNascimento();
         }
+
         private void BuscaDataNascimento()
         {
             if (txtDataInicial.Text.Trim() == "" || txtDataFinal.Text.Trim() == "")
             {
-                Geral.Erro("Informe a duas Datas!");
+                Geral.Erro("Informe as duas datas!");
                 return;
             }
-            if (Convert.ToDateTime(txtDataInicial.Text) > (Convert.ToDateTime(txtDataFinal.Text)))
+
+            if (Convert.ToDateTime(txtDataInicial.Text) > Convert.ToDateTime(txtDataFinal.Text))
             {
-                Geral.Erro("Data FInal não pode ser menor do que a Data Inicial!");
+                Geral.Erro("Data Final não pode ser menor que a Inicial!");
                 return;
             }
-            CriterioPessoa = "AND a.DATA_NASC BETWEEN '" + txtDataInicial.Text + "' AND '" + txtDataFinal.Text.Replace("/", ".") + "'";
+
+            CriterioPessoa = "AND a.DATA_NASC BETWEEN '" + BD.CvData(txtDataInicial.Text) + "' AND '" + txtDataFinal.Text.Replace("/", ".") + "'";
             BuscaPessoa();
+        }
+
+        private void txtDataFinal_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
 
         private void txtDataFinal_Leave(object sender, EventArgs e)
@@ -285,11 +373,6 @@ namespace Setup.Formularios
         {
             if (txtBuscaNome.Text != "")
                 BuscarPessoaNome();
-        }
-
-        private void txtBuscaNome_TextChanged(object sender, EventArgs e)
-        {
-            BuscarPessoaNome();
         }
 
         private void txtCEPBusca_TextChanged(object sender, EventArgs e)
@@ -307,7 +390,7 @@ namespace Setup.Formularios
 
         private void btStatusTodos_CheckedChanged(object sender, EventArgs e)
         {
-            if (btStatusTodos.Checked)
+            if(btStatusTodos.Checked)
             {
                 CriterioPessoa = "";
                 BuscaPessoa();
@@ -316,7 +399,7 @@ namespace Setup.Formularios
 
         private void btStatusAtivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (btStatusAtivo.Checked)
+            if(btStatusAtivo.Checked)
             {
                 CriterioPessoa = "AND a.ATIVO = 'S'";
                 BuscaPessoa();
@@ -329,7 +412,6 @@ namespace Setup.Formularios
             {
                 CriterioPessoa = "AND a.ATIVO = 'N'";
                 BuscaPessoa();
-
             }
         }
 
@@ -370,8 +452,17 @@ namespace Setup.Formularios
             frm.ShowDialog();
         }
 
-       
-        //Fim Buscas
+
+
+
+        //FIM Buscas
+
+
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+            AlterarStatus("N", "inativar");
+        }
+
         private void AlterarStatus(string Status, string Operacao)
         {
             if (dgPessoa.RowCount == 0)
@@ -397,10 +488,6 @@ namespace Setup.Formularios
             AlterarStatus("S", "ativar");
         }
 
-        private void btExcluir_Click(object sender, EventArgs e)
-        {
-            AlterarStatus("N", "inativar");
-        }
 
         private void dgPessoa_SelectionChanged(object sender, EventArgs e)
         {
@@ -409,38 +496,25 @@ namespace Setup.Formularios
 
             if (dgPessoa.CurrentRow.Cells["ATIVO"].Value.ToString() == "S")
             {
-                btExcluir.Visible = true;
+                btInativar.Visible = true;
                 btAtivar.Visible = false;
                 lblStatus.Text = "Inativar";
             }
             else
             {
-                btExcluir.Visible = false;
+                btInativar.Visible = false;
                 btAtivar.Visible = true;
                 lblStatus.Text = "Ativar";
             }
+
         }
+
         private void DashBoardStatus()
         {
             string sql = "SELECT CASE a.ATIVO WHEN 'S' THEN 'Ativo' WHEN 'N' THEN 'Inativo' END AS ATIVO, COUNT(*) AS TOTAL FROM PESSOA a GROUP BY a.ATIVO";
-             graficoSituacao.DataSource = BD.Buscar(sql);
+            graficoSituacao.DataSource = BD.Buscar(sql);
         }
 
-        private void GraficoNiverMes()
-        {
-            string Mes = DateTime.Now.ToString("MM");
-
-            lblTituloAniversario.Text = "ANIVERSÁRIANTES DO MÊS ATUAL";
-
-            string sql = "SELECT EXTRACT(DAY FROM p.DATA_NASC) AS MES, ";
-            sql += "COUNT(*) AS Aniversariantes FROM PESSOA p ";
-            sql += "WHERE EXTRACT(MONTH FROM p.DATA_NASC) = " + Mes;
-            sql += " GROUP BY EXTRACT(DAY FROM p.DATA_NASC)";
-
-            graficoAniversario.DataSource = BD.Buscar(sql);
-            graficoAniversario.DataBind();
-
-        }
         private void DashBoardAniversario()
         {
             lblTituloAniversario.Text = "ANIVERSÁRIANTES POR MES";
@@ -467,19 +541,40 @@ namespace Setup.Formularios
             graficoAniversario.DataBind();
         }
 
+        private void GraficoNiverMes()
+        {
+            string Mes = DateTime.Now.ToString("MM");
+
+            lblTituloAniversario.Text = "ANIVERSÁRIANTES DO MÊS ATUAL";
+            
+            string sql = "SELECT EXTRACT(DAY FROM p.DATA_NASC) AS MES, ";
+            sql += "COUNT(*) AS Aniversariantes FROM PESSOA p ";
+            sql += "WHERE EXTRACT(MONTH FROM p.DATA_NASC) = " + Mes;
+            sql += " GROUP BY EXTRACT(DAY FROM p.DATA_NASC)";
+
+            graficoAniversario.DataSource = BD.Buscar(sql);
+            graficoAniversario.DataBind();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btRelatorio_Click(object sender, EventArgs e)
         {
-            MenuRelatorio.Show(btRelatorio, new Point(-150, 20));
+            MenuRelatorio.Show(btRelatorio, new Point(20, 20));
         }
 
         private void ExportarRelatorio(string Tipo)
         {
-            /*string sql = "SELECT p.NOME, e.LOGRADOURO, c.CIDADE, co.VALOR FROM PESSOA p ";
-            sql += "INNER JOIN ENDERECO e ON e.PESSOA_ID = p.PESSOA_ID ";
-            sql += "INNER JOIN CIDADE c ON C.CIDADE_ID = e.CIDADE_ID ";
-            sql += "INNER JOIN CONTATO co ON co.PESSOA_ID = p.PESSOA_ID ";
-            sql += "WHERE co.PRINCIPAL = 'S' ";
-            sql += "order by p.NOME";*/
+            //string sql = "SELECT p.NOME, e.LOGRADOURO, c.CIDADE, co.VALOR FROM PESSOA p ";
+            //sql += "INNER JOIN ENDERECO e ON e.PESSOA_ID = p.PESSOA_ID ";
+            //sql += "INNER JOIN CIDADE c ON C.CIDADE_ID = e.CIDADE_ID ";
+            //sql += "INNER JOIN CONTATO co ON co.PESSOA_ID = p.PESSOA_ID ";
+            //sql += "WHERE co.PRINCIPAL = 'S' ";
+            //sql += "order by p.NOME";
 
             bsRelatorioPessoa.DataSource = dgPessoa.DataSource;
 
@@ -489,58 +584,7 @@ namespace Setup.Formularios
                 Geral.ImprimirPDF(rpRelatorio, "RelatorioPessoa");
         }
 
-        private void btAdicionar_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblBarraMenu.Left = btAdicionar.Left;
-        }
-
-        private void btAlterar_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblBarraMenu.Left = btAlterar.Left;
-        }
-
-        private void btExcluir_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblBarraMenu.Left = btExcluir.Left;
-        }
-
-        private void btRelatorio_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblBarraMenu.Left = btRelatorio.Left;
-        }
-
-        private void btFicha_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblBarraMenu.Left = btFicha.Left;
-        }
-
-        private void btDashBoard_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblBarraMenu.Left = btDashBoard.Left;
-        }
-
-        private void btBuscar_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblBarraMenu.Left = btBuscar.Left;
-        }
-
-        private void btAdicionar_Click(object sender, EventArgs e)
-        {
-            Formularios.frmModal modal = new frmModal();
-            modal.Show();
-
-            frmCadPessoa frm = new frmCadPessoa();
-            frm.ShowDialog();
-
-            modal.Close();
-        }
-
         private void btFicha_Click(object sender, EventArgs e)
-        {
-            ExportarFicha();
-        }
-
-        private void ExportarFicha()
         {
             if (dgPessoa.RowCount == 0)
             {
@@ -612,7 +656,7 @@ namespace Setup.Formularios
 
         private void ExportarExcel_Click(object sender, EventArgs e)
         {
-            ExportarRelatorio("Exel");
+            ExportarRelatorio("Excel");
         }
 
         private void NiverMes_Click(object sender, EventArgs e)
@@ -625,32 +669,31 @@ namespace Setup.Formularios
             DashBoardAniversario();
         }
 
-        private void exportarExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        private void imprimirRelatórioEmExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExportarRelatorio("Exel");
+
         }
 
-        private void exportarPDFToolStripMenuItem_Click(object sender, EventArgs e)
+        private void adicionarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExportarRelatorio("PDF");
+            frmCadPessoa frm = new frmCadPessoa();
+            frm.ShowDialog();
         }
 
-        private void fichaDeCadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        private void dgPessoa_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ExportarFicha();
+            ColorirPessoa();
         }
 
-        private void dashBoardToolStripMenuItem_Click(object sender, EventArgs e)
+        private void txtBuscaNome_TextChanged(object sender, EventArgs e)
         {
-            tabPage1.Show();
+            CriterioPessoa = "AND a.NOME LIKE '" + txtBuscaNome.Text + "%'";
+            BuscaPessoa();
         }
 
-        private void btBuscar_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 1;
-            btDashBoard.Enabled = true;
-            btBuscar.Enabled = false;
+            this.Close();
         }
     }
 }
-

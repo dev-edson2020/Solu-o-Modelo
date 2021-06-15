@@ -60,7 +60,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnSair.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
@@ -88,9 +88,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(168, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 36);
+            this.label1.Size = new System.Drawing.Size(167, 36);
             this.label1.TabIndex = 3;
-            this.label1.Text = "SUCESSO!!!";
+            this.label1.Text = "SUCESSO!";
             // 
             // frmOK
             // 

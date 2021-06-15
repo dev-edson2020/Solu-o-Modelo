@@ -35,7 +35,6 @@ C:\Users\EdivamCabral\OneDrive\Cursos\09 - FrameWork C# com Firebird\SolucaoMode
 C:\Users\DELL RGS\Desktop\Solução Modelo\Setup\bin\Debug\Setup.exe.config
 C:\Users\DELL RGS\Desktop\Solução Modelo\Setup\bin\Debug\Setup.exe
 C:\Users\DELL RGS\Desktop\Solução Modelo\Setup\bin\Debug\Setup.pdb
-C:\Users\DELL RGS\Desktop\Solução Modelo\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
 C:\Users\DELL RGS\Desktop\Solução Modelo\Setup\obj\Debug\Setup.Formularios.frmConfigDados.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo\Setup\obj\Debug\Setup.Formularios.frmErro.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo\Setup\obj\Debug\Setup.Formularios.frmLogin.resources
@@ -129,14 +128,15 @@ C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\bin\Debug\pt\Microsoft.Report
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmCadEstado.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmCadPessoa.resources
+C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmCadProduto.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmConfigDados.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmErro.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmLiberaAcesso.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmLogin.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmMenuPessoa.resources
+C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmMenuProduto.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmModal.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmOK.resources
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmPergunta.resources
@@ -150,5 +150,162 @@ C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.csproj.CoreCo
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.csproj.CopyComplete
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.exe
 C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.pdb
-C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmMenuProduto.resources
-C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.Formularios.frmCadProduto.resources
+C:\Users\DELL RGS\Desktop\Solução Modelo 1\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\EnvDTE.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\stdole.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\Microsoft.MSXML.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\Setup.Formularios.frmCadEstado.resources
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\Setup.Formularios.frmCadProduto.resources
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\Setup.Formularios.frmLiberaAcesso.resources
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\Setup.Formularios.frmMenuPessoa.resources
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\Setup.Formularios.frmMenuProduto.resources
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\Setup.Formularios.frmModal.resources
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\RdlCompile.cache
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\RdlCompile.compiled
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\Setup.Formularios.frmCadCompra.resources
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\Setup.Formularios.frmFinalidade.resources
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\Setup.Formularios.frmSituacao.resources
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Setup.exe.config
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Setup.exe
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Setup.pdb
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\EnvDTE.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\stdole.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\Microsoft.MSXML.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Solução Modelo - Aula 247\Setup\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmCadCompra.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmCadEstado.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmCadPessoa.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmCadProduto.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmConfigDados.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmErro.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmFinalidade.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmLiberaAcesso.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmLogin.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmMenuPessoa.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmMenuProduto.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmModal.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmOK.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmPergunta.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmPrincipal.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmSituacao.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Formularios.frmSplash.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.Properties.Resources.resources
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.csproj.GenerateResource.cache
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\RdlCompile.cache
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\RdlCompile.compiled
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.csproj.CoreCompileInputs.cache
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.csproj.CopyComplete
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.exe
+D:\Solução Modelo - Aula 247\Setup\obj\Debug\Setup.pdb
+C:\Users\DELL RGS\Desktop\SOLUÇÃO MODELO\Setup\obj\Debug\Setup.Formularios.frmMenuCompra.resources

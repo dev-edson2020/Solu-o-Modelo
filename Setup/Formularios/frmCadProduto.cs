@@ -13,6 +13,7 @@ namespace Setup.Formularios
 {
     public partial class frmCadProduto : Form
     {
+        private string Criterio;
         public frmCadProduto()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace Setup.Formularios
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
         private void Limpar()
         {
@@ -101,10 +103,8 @@ namespace Setup.Formularios
                     Geral.Erro("Produto já cadastrado!");
                 else
                     Geral.Erro(ex.Message);
-            }
-
-
-        }
+            }        
+    }
         private bool ValidaCodigo()
         {
             if (txtCodigo.Text == "")
@@ -176,7 +176,75 @@ namespace Setup.Formularios
         {
             Codigo = "";
             CodBarra = "";
+            FotoAtual = 0;
+
+            CarregarProdutos();
+
+            if (txtId.Text != "")
+            {
+                CarregarFoto();
+                NavegarEntreFotos();
+                PegarProduto();
+                
+            }
         }
+        private void CarregarProdutos()
+        {
+            string sql = "SELECT NOME FROM PRODUTO ORDER BY NOME";
+            cbProduto.DataSource = BD.Buscar(sql);
+            cbProduto.SelectedIndex = -1;
+        }
+        private void CalcularReajuste()
+        {
+            double Custo = 0;
+            double Ajuste = 0;
+
+            try
+            {
+                if (txtReajuste.Text != "")
+                    Ajuste = Convert.ToDouble(txtReajuste.Text);
+
+                if (txtCusto.Text != "")
+                    Custo = Convert.ToDouble(txtCusto.Text.Replace("R$", "").Trim());
+
+                if (Ajuste > 0)
+                {
+                    txtVenda.Text = (Custo * (1 + (Ajuste / 100))).ToString("c");
+                }
+                else
+                    txtVenda.Text = "";
+            }
+            catch
+            {
+                txtVenda.Text = "";
+            }
+        }
+
+        private void PegarProduto()
+        {
+            string sql = "SELECT * FROM PRODUTO WHERE PRODUTO_ID = " + txtId.Text;
+            DataTable dt = BD.Buscar(sql);
+
+            cbProduto.Text = dt.Rows[0]["NOME"].ToString();
+            txtCodigo.Text = dt.Rows[0]["COD"].ToString();
+            txtCodBarra.Text = dt.Rows[0]["COD_BARRA"].ToString();
+
+            if (!String.IsNullOrEmpty(dt.Rows[0]["VALIDADE"].ToString()))
+                txtValidade.Text = Convert.ToDateTime(dt.Rows[0]["VALIDADE"].ToString()).ToShortDateString();
+
+            txtCusto.Text = Convert.ToDouble(dt.Rows[0]["CUSTO"]).ToString("c");
+            txtReajuste.Text = dt.Rows[0]["PERC_REAJUSTE"].ToString();
+            txtVenda.Text = Convert.ToDouble(dt.Rows[0]["VENDA"]).ToString("c");
+            txtEstoque.Text = dt.Rows[0]["ESTOQUE_ATUAL"].ToString();
+            txtEstMinimo.Text = dt.Rows[0]["ESTOQUE_MINIMO"].ToString();
+            txtCadastro.Text = Convert.ToDateTime(dt.Rows[0]["CADASTRO"].ToString()).ToShortDateString();
+
+            if (dt.Rows[0]["ATIVO"].ToString() == "N")
+                CkAtivo.Checked = false;
+            else
+                CkAtivo.Checked = true;
+        }
+
 
         private void BotaoAddFoto_Click(object sender, EventArgs e)
         {
@@ -301,6 +369,29 @@ namespace Setup.Formularios
             FotoProduto.Image = Image.FromStream(ms);
         }
 
+        private void btNovo_Click(object sender, EventArgs e)
+        {
+            Limpar();
+        }
+
+        private void txtCusto_TextChanged(object sender, EventArgs e)
+        {
+            CalcularReajuste();
+        }
+
+        private void txtReajuste_TextChanged(object sender, EventArgs e)
+        {
+            CalcularReajuste();
+        }
+
+        private void frmCadProduto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }
 

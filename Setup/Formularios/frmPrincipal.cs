@@ -6,10 +6,11 @@ using System.Runtime.InteropServices;
 namespace Setup.Formularios
 {
     public partial class frmPrincipal : Form
-    {
+    {      
+
         public frmPrincipal()
         {
-            InitializeComponent();
+            InitializeComponent();         
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
         }
 
@@ -87,64 +88,63 @@ namespace Setup.Formularios
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = new Point(0, 0);
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (Geral.ValidaCampos(panel1, errorProvider1) == true)
-                return;
-
-            string[] c = new string[4];
-            string[] v = new string[4];
-
-            c[0] = "nome";
-            v[0] = txtNome.Text;
-
-            c[1] = "valor";
-            v[1] = BD.cvNum(txtValor.Text);
-
-            c[2] = "data";
-            v[2] = BD.CvData(txtData.Text);
-
-            c[3] = "ativo";
-            v[3] = "S";
-
-            BD.Salvar("teste", c, v);
-
-            Geral.OK("Salvo com sucesso!");
-        }
-
+       
         private void btnPessoa_Click(object sender, EventArgs e)
         {
-            frmModal modal = new frmModal();
-            modal.Show();
-
-            frmMenuPessoa frm = new frmMenuPessoa();
-            frm.ShowDialog();
-
-            modal.Dispose();
-
+            
+            AbrirFormEmPanel(new frmMenuPessoa());
+            
         }
 
         private void btProduto_Click(object sender, EventArgs e)
         {
-            frmModal modal = new frmModal();
-            modal.Show();
-
-            frmMenuProduto frm = new frmMenuProduto();
-            frm.ShowDialog();
-
-            modal.Close();
+            AbrirFormEmPanel(new frmMenuProduto());
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public void AbrirFormEmPanel(object form)
         {
-            this.Close();
+            if (this.panel1.Controls.Count > 0)
+                this.panel1.Controls.RemoveAt(0);
+            Form frm = form as Form;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(frm);
+            this.panel1.Tag = frm;
+            frm.Show();
         }
+
 
         private void btProduto_MouseMove(object sender, MouseEventArgs e)
         {
             lblBarra.Visible = true;
             lblBarra.Location = new Point(12, btProduto.Location.Y);
+        }       
+
+        private void BtCompra_Click(object sender, EventArgs e)
+        {
+            AbrirFormEmPanel(new frmMenuCompra());
+        }
+
+        private void btnFechar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtCompra_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblBarra.Visible = true;
+            lblBarra.Location = new Point(12, BtCompra.Location.Y);
+        }
+
+        private void btVendas_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblBarra.Visible = true;
+            lblBarra.Location = new Point(12, btVendas.Location.Y);
+        }
+
+        private void btFinanceiro_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblBarra.Visible = true;
+            lblBarra.Location = new Point(12, btFinanceiro.Location.Y);
         }
     }   
 }

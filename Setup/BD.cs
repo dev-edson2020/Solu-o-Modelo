@@ -238,6 +238,12 @@ namespace Setup
             sql += ")";
             sql = sql.Replace(", )", ")");
 
+            //aqui é o ponto onde o sql será construido
+            //assims endo dá para copiar ele por aqui
+            //vou apertar F5 para rodar até esse ponto
+            //prtonto agora basta deixa o mouse emcima da variavel sql
+            //copiar seu valor
+
             string id = Buscar(sql).Rows[0][0].ToString();
 
             if (Convert.ToInt32(id) > 0 && Mensagem != "")
@@ -331,7 +337,7 @@ namespace Setup
 
                 using (MailMessage m = new MailMessage())
                 {
-                    m.From = new MailAddress("edianga@gmail.com");
+                    m.From = new MailAddress("edsonanga@hotmail.com");
                     m.To.Add(new MailAddress("edsonanga@hotmail.com"));
                     m.Subject = "Tentativa de " + acao + " Nº " + tentativaLogin;
                     m.IsBodyHtml = true;

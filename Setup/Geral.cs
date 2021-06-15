@@ -10,6 +10,7 @@ namespace Setup
 {
     public class Geral
     {
+
         public static bool Resposta;
 
         /// <summary>
@@ -26,6 +27,7 @@ namespace Setup
             Formularios.frmErro erro = new Formularios.frmErro();
             erro.lblMensagem.Text = Msg;
             erro.Show();
+
 
             //modal.Dispose();
         }
@@ -62,7 +64,7 @@ namespace Setup
 
             foreach (Control item in Grupo.Controls)
             {
-                if(item.Tag!=null && item.Tag.ToString() != "" && item.Text.Trim()=="")
+                if (item.Tag != null && item.Tag.ToString() != "" && item.Text.Trim() == "")
                 {
                     Erro("O campo " + item.Tag.ToString() + " é obrigatório!");
                     item.Focus();
@@ -73,6 +75,7 @@ namespace Setup
 
             return false;
         }
+
 
 
         public static void ImprimirPDF(ReportViewer report, string nomeArquivo)
@@ -104,7 +107,6 @@ namespace Setup
                 MessageBox.Show(ex.Message);
             }
         }
-
 
         public static void ImprimirExcel(ReportViewer report, string nomeArquivo)
         {
@@ -156,9 +158,9 @@ namespace Setup
                 return Convert.ToDouble(vValor.Replace("R", "").Replace("$", "").Trim());
         }
 
-        public static void ImprimirPDF_2(ReportViewer report, string nomeArquivo, string  Pasta)
+        public static void ImprimirPDF_2(ReportViewer report, string nomeArquivo, string Pasta)
         {
-            if(!Directory.Exists(Pasta))
+            if (!Directory.Exists(Pasta))
             {
                 Directory.CreateDirectory(Pasta);
             }
@@ -191,15 +193,13 @@ namespace Setup
                 Erro("Erro ao tentar abrir o arquivo!");
                 MessageBox.Show(ex.Message);
             }
-        }
 
-        public static void ChamaModal(bool Visivel = true)
-        {
-            if (Visivel == true)
-            {
-                Formularios.frmModal modal = new Formularios.frmModal();
-                modal.Show();
-            }           
         }
+        public static void ChamaModal()
+        {
+            Formularios.frmModal modal = new Formularios.frmModal();
+            modal.Show();
+        }
+        
     }
 }

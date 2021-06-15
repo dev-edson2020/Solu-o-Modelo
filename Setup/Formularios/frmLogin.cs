@@ -80,7 +80,8 @@ namespace Setup.Formularios
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            Geral.ChamaModal();            
+            frmModal modal = new frmModal();
+            modal.Show();
         }
     }
 }
