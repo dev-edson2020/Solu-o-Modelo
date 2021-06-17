@@ -64,6 +64,7 @@ namespace Setup.Formularios
         {
             //CriterioPessoa = "";
             //BuscaPessoa();
+            Location = new Point(215, 48); //x,y
             DashBoardStatus();
             DashBoardAniversario();
             tabControl1.SelectedIndex = 0;

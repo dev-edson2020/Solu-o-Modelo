@@ -128,9 +128,9 @@
             this.panelMenu.Controls.Add(this.btProduto);
             this.panelMenu.Controls.Add(this.btnPessoa);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 46);
+            this.panelMenu.Location = new System.Drawing.Point(0, 48);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(214, 435);
+            this.panelMenu.Size = new System.Drawing.Size(214, 433);
             this.panelMenu.TabIndex = 2;
             this.panelMenu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseMove);
             // 
@@ -251,9 +251,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(214, 46);
+            this.panel1.Location = new System.Drawing.Point(214, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(716, 435);
+            this.panel1.Size = new System.Drawing.Size(716, 433);
             this.panel1.TabIndex = 3;
             // 
             // timer1
@@ -293,7 +293,7 @@
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(0, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(930, 46);
+            this.panelSuperior.Size = new System.Drawing.Size(930, 48);
             this.panelSuperior.TabIndex = 0;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
             // 

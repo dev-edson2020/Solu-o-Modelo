@@ -121,6 +121,9 @@
             this.EST_MINIMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
+            this.panelSuperior = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btAdd)).BeginInit();
@@ -139,6 +142,7 @@
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtAtivar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).BeginInit();
+            this.panelSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -148,9 +152,9 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTitulo.Location = new System.Drawing.Point(19, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(19, 7);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(594, 44);
+            this.lblTitulo.Size = new System.Drawing.Size(558, 44);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Gerenciamento de Produtos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,7 +176,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 621);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1197, 49);
+            this.panel1.Size = new System.Drawing.Size(1161, 49);
             this.panel1.TabIndex = 3;
             // 
             // label25
@@ -304,7 +308,7 @@
             this.btAdd.BackColor = System.Drawing.Color.Transparent;
             this.btAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAdd.Image = ((System.Drawing.Image)(resources.GetObject("btAdd.Image")));
-            this.btAdd.Location = new System.Drawing.Point(24, 81);
+            this.btAdd.Location = new System.Drawing.Point(24, 69);
             this.btAdd.Margin = new System.Windows.Forms.Padding(0);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(84, 72);
@@ -319,7 +323,7 @@
             this.btAlterar.BackColor = System.Drawing.Color.Transparent;
             this.btAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btAlterar.Image")));
-            this.btAlterar.Location = new System.Drawing.Point(199, 81);
+            this.btAlterar.Location = new System.Drawing.Point(199, 69);
             this.btAlterar.Margin = new System.Windows.Forms.Padding(0);
             this.btAlterar.Name = "btAlterar";
             this.btAlterar.Size = new System.Drawing.Size(84, 72);
@@ -334,7 +338,7 @@
             this.btExcluir.BackColor = System.Drawing.Color.Transparent;
             this.btExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btExcluir.Image")));
-            this.btExcluir.Location = new System.Drawing.Point(374, 81);
+            this.btExcluir.Location = new System.Drawing.Point(374, 69);
             this.btExcluir.Margin = new System.Windows.Forms.Padding(0);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.Size = new System.Drawing.Size(84, 72);
@@ -349,7 +353,7 @@
             this.btRelatorio.BackColor = System.Drawing.Color.Transparent;
             this.btRelatorio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btRelatorio.Image = ((System.Drawing.Image)(resources.GetObject("btRelatorio.Image")));
-            this.btRelatorio.Location = new System.Drawing.Point(549, 81);
+            this.btRelatorio.Location = new System.Drawing.Point(549, 69);
             this.btRelatorio.Margin = new System.Windows.Forms.Padding(0);
             this.btRelatorio.Name = "btRelatorio";
             this.btRelatorio.Size = new System.Drawing.Size(84, 72);
@@ -364,7 +368,7 @@
             this.btDashBoard.BackColor = System.Drawing.Color.Transparent;
             this.btDashBoard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btDashBoard.Image = ((System.Drawing.Image)(resources.GetObject("btDashBoard.Image")));
-            this.btDashBoard.Location = new System.Drawing.Point(724, 81);
+            this.btDashBoard.Location = new System.Drawing.Point(724, 69);
             this.btDashBoard.Margin = new System.Windows.Forms.Padding(0);
             this.btDashBoard.Name = "btDashBoard";
             this.btDashBoard.Size = new System.Drawing.Size(84, 72);
@@ -378,7 +382,7 @@
             this.btBuscar.BackColor = System.Drawing.Color.Transparent;
             this.btBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btBuscar.Image")));
-            this.btBuscar.Location = new System.Drawing.Point(899, 81);
+            this.btBuscar.Location = new System.Drawing.Point(899, 69);
             this.btBuscar.Margin = new System.Windows.Forms.Padding(0);
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Size = new System.Drawing.Size(84, 72);
@@ -398,7 +402,7 @@
             // lblBarraMenu
             // 
             this.lblBarraMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblBarraMenu.Location = new System.Drawing.Point(21, 179);
+            this.lblBarraMenu.Location = new System.Drawing.Point(21, 164);
             this.lblBarraMenu.Name = "lblBarraMenu";
             this.lblBarraMenu.Size = new System.Drawing.Size(84, 5);
             this.lblBarraMenu.TabIndex = 17;
@@ -407,7 +411,7 @@
             // 
             this.label10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(896, 160);
+            this.label10.Location = new System.Drawing.Point(896, 148);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 19);
             this.label10.TabIndex = 11;
@@ -418,7 +422,7 @@
             // 
             this.label9.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(721, 160);
+            this.label9.Location = new System.Drawing.Point(721, 148);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 19);
             this.label9.TabIndex = 12;
@@ -429,7 +433,7 @@
             // 
             this.label7.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(546, 160);
+            this.label7.Location = new System.Drawing.Point(546, 148);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 19);
             this.label7.TabIndex = 13;
@@ -441,7 +445,7 @@
             // 
             this.lblStatus.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.Gray;
-            this.lblStatus.Location = new System.Drawing.Point(371, 160);
+            this.lblStatus.Location = new System.Drawing.Point(371, 148);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(87, 19);
             this.lblStatus.TabIndex = 14;
@@ -452,7 +456,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(196, 160);
+            this.label8.Location = new System.Drawing.Point(196, 148);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 19);
             this.label8.TabIndex = 15;
@@ -463,7 +467,7 @@
             // 
             this.label11.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(21, 160);
+            this.label11.Location = new System.Drawing.Point(21, 148);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 19);
             this.label11.TabIndex = 16;
@@ -480,7 +484,7 @@
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(192, 20);
-            this.tabControl1.Location = new System.Drawing.Point(3, 202);
+            this.tabControl1.Location = new System.Drawing.Point(3, 189);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1158, 78);
@@ -938,7 +942,7 @@
             this.BtAtivar.BackColor = System.Drawing.Color.Transparent;
             this.BtAtivar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtAtivar.Image = ((System.Drawing.Image)(resources.GetObject("BtAtivar.Image")));
-            this.BtAtivar.Location = new System.Drawing.Point(374, 81);
+            this.BtAtivar.Location = new System.Drawing.Point(374, 69);
             this.BtAtivar.Margin = new System.Windows.Forms.Padding(0);
             this.BtAtivar.Name = "BtAtivar";
             this.BtAtivar.Size = new System.Drawing.Size(84, 72);
@@ -956,7 +960,7 @@
             reportDataSource1.Value = this.bindingSource1;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Setup.Relatorios.ProdutoRelatorio.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(1059, 93);
+            this.reportViewer1.Location = new System.Drawing.Point(1059, 81);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(90, 60);
@@ -985,11 +989,11 @@
             this.Status});
             this.dgProduto.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgProduto.GridColor = System.Drawing.Color.Black;
-            this.dgProduto.Location = new System.Drawing.Point(3, 292);
+            this.dgProduto.Location = new System.Drawing.Point(3, 273);
             this.dgProduto.Name = "dgProduto";
             this.dgProduto.RowHeadersWidth = 10;
             this.dgProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgProduto.Size = new System.Drawing.Size(1158, 327);
+            this.dgProduto.Size = new System.Drawing.Size(1158, 346);
             this.dgProduto.TabIndex = 18;
             this.dgProduto.TabStop = false;
             this.dgProduto.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProduto_CellEndEdit);
@@ -1096,7 +1100,7 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.Image = global::Setup.Properties.Resources.round_west_black_36dp;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(1139, 0);
+            this.button1.Location = new System.Drawing.Point(1105, -2);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 53);
@@ -1104,14 +1108,60 @@
             this.button1.Text = "Voltar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panelSuperior
+            // 
+            this.panelSuperior.BackColor = System.Drawing.Color.White;
+            this.panelSuperior.Controls.Add(this.label1);
+            this.panelSuperior.Controls.Add(this.button2);
+            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Size = new System.Drawing.Size(1161, 57);
+            this.panelSuperior.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(22, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1056, 49);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Gerenciamento de Produtos";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.AutoEllipsis = true;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.Image = global::Setup.Properties.Resources.round_west_black_36dp;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button2.Location = new System.Drawing.Point(1101, -1);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(59, 57);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Voltar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmMenuProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1197, 670);
+            this.ClientSize = new System.Drawing.Size(1161, 670);
+            this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.tabControl1);
@@ -1135,7 +1185,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenuProduto";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmMenuProduto";
             this.Load += new System.EventHandler(this.frmMenuProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
@@ -1163,6 +1213,7 @@
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtAtivar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).EndInit();
+            this.panelSuperior.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1249,5 +1300,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Button button1;
         internal System.Windows.Forms.PictureBox BtAtivar;
+        private System.Windows.Forms.Panel panelSuperior;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
     }
 }

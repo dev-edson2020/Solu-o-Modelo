@@ -138,6 +138,8 @@ namespace Setup.Formularios
 
         private void frmMenuProduto_Load(object sender, EventArgs e)
         {
+            Location = new Point(215, 48); //x,y
+
             Criterio = "";
             //BuscaGeral();
 
@@ -521,7 +523,7 @@ namespace Setup.Formularios
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }

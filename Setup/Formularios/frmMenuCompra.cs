@@ -19,19 +19,28 @@ namespace Setup.Formularios
 
         private void BtNovo_Click(object sender, EventArgs e)
         {
+            Location = new Point(300, 300);
+            
+
+            
+
             frmCadCompra frm = new frmCadCompra();
             frm.ShowDialog();
         }
 
         private void BtPessoa_Click(object sender, EventArgs e)
         {
-            frmMenuPessoa frm = new frmMenuPessoa();
+
+            frmMenuPessoa frm = new frmMenuPessoa();        
             frm.ShowDialog();
         }
 
         private void BtProduto_Click(object sender, EventArgs e)
         {
             frmMenuProduto frm = new frmMenuProduto();
+
+            Location = new Point(200, 300); //x,y
+
             frm.ShowDialog();
         }
 
@@ -257,6 +266,11 @@ namespace Setup.Formularios
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

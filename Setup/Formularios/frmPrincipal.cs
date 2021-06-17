@@ -6,8 +6,7 @@ using System.Runtime.InteropServices;
 namespace Setup.Formularios
 {
     public partial class frmPrincipal : Form
-    {      
-
+    {        
         public frmPrincipal()
         {
             InitializeComponent();         

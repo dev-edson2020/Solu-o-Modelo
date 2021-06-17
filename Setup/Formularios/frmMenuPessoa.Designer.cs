@@ -80,6 +80,22 @@
             this.label6 = new System.Windows.Forms.Label();
             this.graficoSituacao = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgPessoa = new Setup.Controles.dg();
+            this.PESSOA_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VALOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SEXO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_NASC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ENDERECO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BAIRRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SIGLA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ATIVO = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MenuGeral = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.adicionarProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarProdutoSelecionadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,11 +112,13 @@
             this.btNomeInicio = new System.Windows.Forms.RadioButton();
             this.btNomeContem = new System.Windows.Forms.RadioButton();
             this.btNomeExato = new System.Windows.Forms.RadioButton();
+            this.txtBuscaNome = new Setup.Controles.txt();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.opCodigoContem = new System.Windows.Forms.RadioButton();
             this.opCodigoExato = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
+            this.txtBuscaCodigo = new Setup.Controles.txt();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.opCNPJExato = new System.Windows.Forms.RadioButton();
@@ -110,6 +128,8 @@
             this.opCPFExato = new System.Windows.Forms.RadioButton();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtCNPJBusca = new Setup.Controles.txtCNPJ();
+            this.txtCPFBusca = new Setup.Controles.txtCPF();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.opFeminino = new System.Windows.Forms.RadioButton();
             this.opMasculino = new System.Windows.Forms.RadioButton();
@@ -117,7 +137,11 @@
             this.btBuscarData = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.txtDataFinal = new Setup.Controles.txtDataLeave();
+            this.txtDataInicial = new Setup.Controles.txtDataLeave();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.txtBuscaEndereco = new Setup.Controles.txt();
+            this.txtCEPBusca = new Setup.Controles.txtCEP();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
@@ -137,30 +161,6 @@
             this.btInativar = new System.Windows.Forms.PictureBox();
             this.btAlterar = new System.Windows.Forms.PictureBox();
             this.btAdicionar = new System.Windows.Forms.PictureBox();
-            this.dgPessoa = new Setup.Controles.dg();
-            this.PESSOA_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VALOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SEXO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_NASC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ENDERECO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BAIRRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SIGLA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ATIVO = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.txtBuscaNome = new Setup.Controles.txt();
-            this.txtBuscaCodigo = new Setup.Controles.txt();
-            this.txtCNPJBusca = new Setup.Controles.txtCNPJ();
-            this.txtCPFBusca = new Setup.Controles.txtCPF();
-            this.txtDataFinal = new Setup.Controles.txtDataLeave();
-            this.txtDataInicial = new Setup.Controles.txtDataLeave();
-            this.txtBuscaEndereco = new Setup.Controles.txt();
-            this.txtCEPBusca = new Setup.Controles.txtCEP();
             ((System.ComponentModel.ISupportInitialize)(this.bsRelatorioPessoa)).BeginInit();
             this.panel1.SuspendLayout();
             this.MenuRelatorio.SuspendLayout();
@@ -174,6 +174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficoSituacao)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPessoa)).BeginInit();
             this.MenuGeral.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -195,7 +196,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btInativar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btAlterar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btAdicionar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPessoa)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -207,10 +207,10 @@
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.lblTotalInativos);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(0, 631);
+            this.panel1.Location = new System.Drawing.Point(0, 470);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1199, 41);
+            this.panel1.Size = new System.Drawing.Size(1159, 11);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -386,11 +386,12 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1223, 458);
+            this.tabControl1.Size = new System.Drawing.Size(1184, 501);
             this.tabControl1.TabIndex = 9;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.label22);
             this.tabPage1.Controls.Add(this.graficoAniversario);
             this.tabPage1.Controls.Add(this.label19);
@@ -406,7 +407,7 @@
             this.tabPage1.Location = new System.Drawing.Point(23, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1196, 450);
+            this.tabPage1.Size = new System.Drawing.Size(1157, 493);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -415,7 +416,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(79, 416);
+            this.label22.Location = new System.Drawing.Point(79, 415);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(308, 13);
             this.label22.TabIndex = 6;
@@ -431,7 +432,7 @@
             this.graficoAniversario.ContextMenuStrip = this.MenuGrafico;
             legend1.Name = "Legend1";
             this.graficoAniversario.Legends.Add(legend1);
-            this.graficoAniversario.Location = new System.Drawing.Point(15, 83);
+            this.graficoAniversario.Location = new System.Drawing.Point(12, 73);
             this.graficoAniversario.Name = "graficoAniversario";
             this.graficoAniversario.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea1";
@@ -442,7 +443,7 @@
             series1.XValueMember = "MES";
             series1.YValueMembers = "Aniversariantes";
             this.graficoAniversario.Series.Add(series1);
-            this.graficoAniversario.Size = new System.Drawing.Size(748, 317);
+            this.graficoAniversario.Size = new System.Drawing.Size(748, 327);
             this.graficoAniversario.TabIndex = 5;
             this.graficoAniversario.Text = "chart1";
             // 
@@ -492,7 +493,7 @@
             reportDataSource1.Value = this.bsRelatorioPessoa;
             this.rpRelatorio.LocalReport.DataSources.Add(reportDataSource1);
             this.rpRelatorio.LocalReport.ReportEmbeddedResource = "Setup.Relatorios.PessoaRelatorio.rdlc";
-            this.rpRelatorio.Location = new System.Drawing.Point(1136, 73);
+            this.rpRelatorio.Location = new System.Drawing.Point(1099, 73);
             this.rpRelatorio.Name = "rpRelatorio";
             this.rpRelatorio.ServerReport.BearerToken = null;
             this.rpRelatorio.Size = new System.Drawing.Size(44, 34);
@@ -503,7 +504,7 @@
             // 
             this.rpFicha.DocumentMapWidth = 34;
             this.rpFicha.LocalReport.ReportEmbeddedResource = "Setup.Relatorios.PessoaFicha.rdlc";
-            this.rpFicha.Location = new System.Drawing.Point(1136, 6);
+            this.rpFicha.Location = new System.Drawing.Point(1099, 6);
             this.rpFicha.Name = "rpFicha";
             this.rpFicha.ServerReport.BearerToken = null;
             this.rpFicha.Size = new System.Drawing.Size(44, 51);
@@ -565,7 +566,7 @@
             this.graficoSituacao.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.graficoSituacao.Legends.Add(legend2);
-            this.graficoSituacao.Location = new System.Drawing.Point(807, 121);
+            this.graficoSituacao.Location = new System.Drawing.Point(790, 165);
             this.graficoSituacao.Name = "graficoSituacao";
             this.graficoSituacao.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.graficoSituacao.PaletteCustomColors = new System.Drawing.Color[] {
@@ -593,10 +594,175 @@
             this.tabPage2.Location = new System.Drawing.Point(23, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1196, 450);
+            this.tabPage2.Size = new System.Drawing.Size(1157, 493);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dgPessoa
+            // 
+            this.dgPessoa.AllowUserToAddRows = false;
+            this.dgPessoa.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgPessoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgPessoa.BackgroundColor = System.Drawing.Color.White;
+            this.dgPessoa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgPessoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPessoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PESSOA_ID,
+            this.NOME,
+            this.CODIGO,
+            this.VALOR,
+            this.CPF,
+            this.CNPJ,
+            this.SEXO,
+            this.DATA_NASC,
+            this.ENDERECO,
+            this.CEP,
+            this.BAIRRO,
+            this.CIDADE,
+            this.ESTADO,
+            this.SIGLA,
+            this.ATIVO});
+            this.dgPessoa.ContextMenuStrip = this.MenuGeral;
+            this.dgPessoa.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgPessoa.GridColor = System.Drawing.Color.Black;
+            this.dgPessoa.Location = new System.Drawing.Point(5, 84);
+            this.dgPessoa.Name = "dgPessoa";
+            this.dgPessoa.ReadOnly = true;
+            this.dgPessoa.RowHeadersWidth = 10;
+            this.dgPessoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgPessoa.Size = new System.Drawing.Size(1154, 362);
+            this.dgPessoa.TabIndex = 0;
+            this.dgPessoa.TabStop = false;
+            this.dgPessoa.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgPessoa_ColumnHeaderMouseClick);
+            this.dgPessoa.SelectionChanged += new System.EventHandler(this.dgPessoa_SelectionChanged);
+            // 
+            // PESSOA_ID
+            // 
+            this.PESSOA_ID.DataPropertyName = "PESSOA_ID";
+            this.PESSOA_ID.HeaderText = "PESSOA_ID";
+            this.PESSOA_ID.Name = "PESSOA_ID";
+            this.PESSOA_ID.ReadOnly = true;
+            this.PESSOA_ID.Visible = false;
+            // 
+            // NOME
+            // 
+            this.NOME.DataPropertyName = "NOME";
+            this.NOME.HeaderText = "NOME";
+            this.NOME.Name = "NOME";
+            this.NOME.ReadOnly = true;
+            this.NOME.Width = 250;
+            // 
+            // CODIGO
+            // 
+            this.CODIGO.DataPropertyName = "CODIGO";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.CODIGO.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CODIGO.HeaderText = "CODIGO";
+            this.CODIGO.Name = "CODIGO";
+            this.CODIGO.ReadOnly = true;
+            this.CODIGO.Width = 80;
+            // 
+            // VALOR
+            // 
+            this.VALOR.DataPropertyName = "VALOR";
+            this.VALOR.HeaderText = "CONTATO";
+            this.VALOR.Name = "VALOR";
+            this.VALOR.ReadOnly = true;
+            this.VALOR.Width = 150;
+            // 
+            // CPF
+            // 
+            this.CPF.DataPropertyName = "CPF";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CPF.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CPF.HeaderText = "CPF";
+            this.CPF.Name = "CPF";
+            this.CPF.ReadOnly = true;
+            // 
+            // CNPJ
+            // 
+            this.CNPJ.DataPropertyName = "CNPJ";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CNPJ.DefaultCellStyle = dataGridViewCellStyle4;
+            this.CNPJ.HeaderText = "CNPJ";
+            this.CNPJ.Name = "CNPJ";
+            this.CNPJ.ReadOnly = true;
+            // 
+            // SEXO
+            // 
+            this.SEXO.DataPropertyName = "SEXO";
+            this.SEXO.HeaderText = "SEXO";
+            this.SEXO.Name = "SEXO";
+            this.SEXO.ReadOnly = true;
+            // 
+            // DATA_NASC
+            // 
+            this.DATA_NASC.DataPropertyName = "DATA_NASC";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "d";
+            dataGridViewCellStyle5.NullValue = null;
+            this.DATA_NASC.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DATA_NASC.HeaderText = "NASCIMENTO";
+            this.DATA_NASC.Name = "DATA_NASC";
+            this.DATA_NASC.ReadOnly = true;
+            // 
+            // ENDERECO
+            // 
+            this.ENDERECO.DataPropertyName = "ENDERECO";
+            this.ENDERECO.HeaderText = "ENDEREÇO";
+            this.ENDERECO.Name = "ENDERECO";
+            this.ENDERECO.ReadOnly = true;
+            // 
+            // CEP
+            // 
+            this.CEP.DataPropertyName = "CEP";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CEP.DefaultCellStyle = dataGridViewCellStyle6;
+            this.CEP.HeaderText = "CEP";
+            this.CEP.Name = "CEP";
+            this.CEP.ReadOnly = true;
+            // 
+            // BAIRRO
+            // 
+            this.BAIRRO.DataPropertyName = "BAIRRO";
+            this.BAIRRO.HeaderText = "BAIRRO";
+            this.BAIRRO.Name = "BAIRRO";
+            this.BAIRRO.ReadOnly = true;
+            // 
+            // CIDADE
+            // 
+            this.CIDADE.DataPropertyName = "CIDADE";
+            this.CIDADE.HeaderText = "CIDADE";
+            this.CIDADE.Name = "CIDADE";
+            this.CIDADE.ReadOnly = true;
+            // 
+            // ESTADO
+            // 
+            this.ESTADO.DataPropertyName = "ESTADO";
+            this.ESTADO.HeaderText = "ESTADO";
+            this.ESTADO.Name = "ESTADO";
+            this.ESTADO.ReadOnly = true;
+            // 
+            // SIGLA
+            // 
+            this.SIGLA.DataPropertyName = "SIGLA";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SIGLA.DefaultCellStyle = dataGridViewCellStyle7;
+            this.SIGLA.HeaderText = "SIGLA";
+            this.SIGLA.Name = "SIGLA";
+            this.SIGLA.ReadOnly = true;
+            // 
+            // ATIVO
+            // 
+            this.ATIVO.DataPropertyName = "ATIVO";
+            this.ATIVO.FalseValue = "N";
+            this.ATIVO.HeaderText = "ATIVO";
+            this.ATIVO.Name = "ATIVO";
+            this.ATIVO.ReadOnly = true;
+            this.ATIVO.TrueValue = "S";
             // 
             // MenuGeral
             // 
@@ -677,7 +843,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1190, 80);
+            this.panel2.Size = new System.Drawing.Size(1151, 80);
             this.panel2.TabIndex = 1;
             // 
             // tabControl2
@@ -763,6 +929,19 @@
             this.btNomeExato.UseVisualStyleBackColor = true;
             this.btNomeExato.CheckedChanged += new System.EventHandler(this.btNomeExato_CheckedChanged);
             // 
+            // txtBuscaNome
+            // 
+            this.txtBuscaNome.BackColor = System.Drawing.Color.White;
+            this.txtBuscaNome.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscaNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscaNome.Location = new System.Drawing.Point(400, 15);
+            this.txtBuscaNome.Name = "txtBuscaNome";
+            this.txtBuscaNome.Size = new System.Drawing.Size(275, 23);
+            this.txtBuscaNome.TabIndex = 1;
+            this.txtBuscaNome.TextChanged += new System.EventHandler(this.txtBuscaNome_TextChanged);
+            this.txtBuscaNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscaNome_KeyDown);
+            this.txtBuscaNome.Leave += new System.EventHandler(this.txtBuscaNome_Leave);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -820,6 +999,18 @@
             this.label11.Size = new System.Drawing.Size(232, 17);
             this.label11.TabIndex = 3;
             this.label11.Text = "Informe o Código Para Buscar";
+            // 
+            // txtBuscaCodigo
+            // 
+            this.txtBuscaCodigo.BackColor = System.Drawing.Color.White;
+            this.txtBuscaCodigo.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscaCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscaCodigo.Location = new System.Drawing.Point(561, 17);
+            this.txtBuscaCodigo.Name = "txtBuscaCodigo";
+            this.txtBuscaCodigo.Size = new System.Drawing.Size(86, 23);
+            this.txtBuscaCodigo.TabIndex = 4;
+            this.txtBuscaCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBuscaCodigo.TextChanged += new System.EventHandler(this.txtBuscaCodigo_TextChanged);
             // 
             // tabPage5
             // 
@@ -926,6 +1117,28 @@
             this.label12.Text = "Informe o CPF Para Buscar";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
+            // txtCNPJBusca
+            // 
+            this.txtCNPJBusca.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCNPJBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCNPJBusca.Location = new System.Drawing.Point(807, 14);
+            this.txtCNPJBusca.Name = "txtCNPJBusca";
+            this.txtCNPJBusca.Size = new System.Drawing.Size(143, 23);
+            this.txtCNPJBusca.TabIndex = 16;
+            this.txtCNPJBusca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCNPJBusca.TextChanged += new System.EventHandler(this.txtCNPJBusca_TextChanged);
+            // 
+            // txtCPFBusca
+            // 
+            this.txtCPFBusca.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPFBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCPFBusca.Location = new System.Drawing.Point(252, 14);
+            this.txtCPFBusca.Name = "txtCPFBusca";
+            this.txtCPFBusca.Size = new System.Drawing.Size(139, 23);
+            this.txtCPFBusca.TabIndex = 15;
+            this.txtCPFBusca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCPFBusca.TextChanged += new System.EventHandler(this.txtCPFBusca_TextChanged);
+            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.opFeminino);
@@ -1005,6 +1218,30 @@
             this.label15.TabIndex = 8;
             this.label15.Text = "Informe o Periodo Para Buscar";
             // 
+            // txtDataFinal
+            // 
+            this.txtDataFinal.BackColor = System.Drawing.Color.White;
+            this.txtDataFinal.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDataFinal.Location = new System.Drawing.Point(699, 14);
+            this.txtDataFinal.Name = "txtDataFinal";
+            this.txtDataFinal.Size = new System.Drawing.Size(96, 23);
+            this.txtDataFinal.TabIndex = 1;
+            this.txtDataFinal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDataFinal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDataFinal_KeyDown);
+            this.txtDataFinal.Leave += new System.EventHandler(this.txtDataFinal_Leave);
+            // 
+            // txtDataInicial
+            // 
+            this.txtDataInicial.BackColor = System.Drawing.Color.White;
+            this.txtDataInicial.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataInicial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDataInicial.Location = new System.Drawing.Point(555, 14);
+            this.txtDataInicial.Name = "txtDataInicial";
+            this.txtDataInicial.Size = new System.Drawing.Size(96, 23);
+            this.txtDataInicial.TabIndex = 0;
+            this.txtDataInicial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.txtBuscaEndereco);
@@ -1018,6 +1255,28 @@
             this.tabPage8.TabIndex = 5;
             this.tabPage8.Text = "Endereço";
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscaEndereco
+            // 
+            this.txtBuscaEndereco.BackColor = System.Drawing.Color.White;
+            this.txtBuscaEndereco.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscaEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscaEndereco.Location = new System.Drawing.Point(725, 13);
+            this.txtBuscaEndereco.Name = "txtBuscaEndereco";
+            this.txtBuscaEndereco.Size = new System.Drawing.Size(336, 23);
+            this.txtBuscaEndereco.TabIndex = 0;
+            this.txtBuscaEndereco.TextChanged += new System.EventHandler(this.txtBuscaEndereco_TextChanged);
+            // 
+            // txtCEPBusca
+            // 
+            this.txtCEPBusca.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCEPBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCEPBusca.Location = new System.Drawing.Point(329, 13);
+            this.txtCEPBusca.Name = "txtCEPBusca";
+            this.txtCEPBusca.Size = new System.Drawing.Size(96, 23);
+            this.txtCEPBusca.TabIndex = 1;
+            this.txtCEPBusca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCEPBusca.TextChanged += new System.EventHandler(this.txtCEPBusca_TextChanged);
             // 
             // label18
             // 
@@ -1092,7 +1351,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblTitulo.Location = new System.Drawing.Point(50, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(1056, 53);
+            this.lblTitulo.Size = new System.Drawing.Size(831, 53);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Gerenciamento de Pessoas";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1105,7 +1364,7 @@
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(0, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1199, 57);
+            this.panelSuperior.Size = new System.Drawing.Size(1161, 57);
             this.panelSuperior.TabIndex = 1;
             // 
             // button1
@@ -1119,7 +1378,7 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.Image = global::Setup.Properties.Resources.round_west_black_36dp;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(1142, 3);
+            this.button1.Location = new System.Drawing.Point(1105, 3);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(54, 53);
@@ -1261,273 +1520,14 @@
             this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click);
             this.btAdicionar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btAdicionar_MouseMove);
             // 
-            // dgPessoa
-            // 
-            this.dgPessoa.AllowUserToAddRows = false;
-            this.dgPessoa.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgPessoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgPessoa.BackgroundColor = System.Drawing.Color.White;
-            this.dgPessoa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgPessoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPessoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PESSOA_ID,
-            this.NOME,
-            this.CODIGO,
-            this.VALOR,
-            this.CPF,
-            this.CNPJ,
-            this.SEXO,
-            this.DATA_NASC,
-            this.ENDERECO,
-            this.CEP,
-            this.BAIRRO,
-            this.CIDADE,
-            this.ESTADO,
-            this.SIGLA,
-            this.ATIVO});
-            this.dgPessoa.ContextMenuStrip = this.MenuGeral;
-            this.dgPessoa.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgPessoa.GridColor = System.Drawing.Color.Black;
-            this.dgPessoa.Location = new System.Drawing.Point(5, 84);
-            this.dgPessoa.Name = "dgPessoa";
-            this.dgPessoa.ReadOnly = true;
-            this.dgPessoa.RowHeadersWidth = 10;
-            this.dgPessoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgPessoa.Size = new System.Drawing.Size(1186, 361);
-            this.dgPessoa.TabIndex = 0;
-            this.dgPessoa.TabStop = false;
-            this.dgPessoa.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgPessoa_ColumnHeaderMouseClick);
-            this.dgPessoa.SelectionChanged += new System.EventHandler(this.dgPessoa_SelectionChanged);
-            // 
-            // PESSOA_ID
-            // 
-            this.PESSOA_ID.DataPropertyName = "PESSOA_ID";
-            this.PESSOA_ID.HeaderText = "PESSOA_ID";
-            this.PESSOA_ID.Name = "PESSOA_ID";
-            this.PESSOA_ID.ReadOnly = true;
-            this.PESSOA_ID.Visible = false;
-            // 
-            // NOME
-            // 
-            this.NOME.DataPropertyName = "NOME";
-            this.NOME.HeaderText = "NOME";
-            this.NOME.Name = "NOME";
-            this.NOME.ReadOnly = true;
-            this.NOME.Width = 250;
-            // 
-            // CODIGO
-            // 
-            this.CODIGO.DataPropertyName = "CODIGO";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.CODIGO.DefaultCellStyle = dataGridViewCellStyle2;
-            this.CODIGO.HeaderText = "CODIGO";
-            this.CODIGO.Name = "CODIGO";
-            this.CODIGO.ReadOnly = true;
-            this.CODIGO.Width = 80;
-            // 
-            // VALOR
-            // 
-            this.VALOR.DataPropertyName = "VALOR";
-            this.VALOR.HeaderText = "CONTATO";
-            this.VALOR.Name = "VALOR";
-            this.VALOR.ReadOnly = true;
-            this.VALOR.Width = 150;
-            // 
-            // CPF
-            // 
-            this.CPF.DataPropertyName = "CPF";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CPF.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CPF.HeaderText = "CPF";
-            this.CPF.Name = "CPF";
-            this.CPF.ReadOnly = true;
-            // 
-            // CNPJ
-            // 
-            this.CNPJ.DataPropertyName = "CNPJ";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CNPJ.DefaultCellStyle = dataGridViewCellStyle4;
-            this.CNPJ.HeaderText = "CNPJ";
-            this.CNPJ.Name = "CNPJ";
-            this.CNPJ.ReadOnly = true;
-            // 
-            // SEXO
-            // 
-            this.SEXO.DataPropertyName = "SEXO";
-            this.SEXO.HeaderText = "SEXO";
-            this.SEXO.Name = "SEXO";
-            this.SEXO.ReadOnly = true;
-            // 
-            // DATA_NASC
-            // 
-            this.DATA_NASC.DataPropertyName = "DATA_NASC";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "d";
-            dataGridViewCellStyle5.NullValue = null;
-            this.DATA_NASC.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DATA_NASC.HeaderText = "NASCIMENTO";
-            this.DATA_NASC.Name = "DATA_NASC";
-            this.DATA_NASC.ReadOnly = true;
-            // 
-            // ENDERECO
-            // 
-            this.ENDERECO.DataPropertyName = "ENDERECO";
-            this.ENDERECO.HeaderText = "ENDEREÇO";
-            this.ENDERECO.Name = "ENDERECO";
-            this.ENDERECO.ReadOnly = true;
-            // 
-            // CEP
-            // 
-            this.CEP.DataPropertyName = "CEP";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CEP.DefaultCellStyle = dataGridViewCellStyle6;
-            this.CEP.HeaderText = "CEP";
-            this.CEP.Name = "CEP";
-            this.CEP.ReadOnly = true;
-            // 
-            // BAIRRO
-            // 
-            this.BAIRRO.DataPropertyName = "BAIRRO";
-            this.BAIRRO.HeaderText = "BAIRRO";
-            this.BAIRRO.Name = "BAIRRO";
-            this.BAIRRO.ReadOnly = true;
-            // 
-            // CIDADE
-            // 
-            this.CIDADE.DataPropertyName = "CIDADE";
-            this.CIDADE.HeaderText = "CIDADE";
-            this.CIDADE.Name = "CIDADE";
-            this.CIDADE.ReadOnly = true;
-            // 
-            // ESTADO
-            // 
-            this.ESTADO.DataPropertyName = "ESTADO";
-            this.ESTADO.HeaderText = "ESTADO";
-            this.ESTADO.Name = "ESTADO";
-            this.ESTADO.ReadOnly = true;
-            // 
-            // SIGLA
-            // 
-            this.SIGLA.DataPropertyName = "SIGLA";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SIGLA.DefaultCellStyle = dataGridViewCellStyle7;
-            this.SIGLA.HeaderText = "SIGLA";
-            this.SIGLA.Name = "SIGLA";
-            this.SIGLA.ReadOnly = true;
-            // 
-            // ATIVO
-            // 
-            this.ATIVO.DataPropertyName = "ATIVO";
-            this.ATIVO.FalseValue = "N";
-            this.ATIVO.HeaderText = "ATIVO";
-            this.ATIVO.Name = "ATIVO";
-            this.ATIVO.ReadOnly = true;
-            this.ATIVO.TrueValue = "S";
-            // 
-            // txtBuscaNome
-            // 
-            this.txtBuscaNome.BackColor = System.Drawing.Color.White;
-            this.txtBuscaNome.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscaNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscaNome.Location = new System.Drawing.Point(400, 15);
-            this.txtBuscaNome.Name = "txtBuscaNome";
-            this.txtBuscaNome.Size = new System.Drawing.Size(275, 23);
-            this.txtBuscaNome.TabIndex = 1;
-            this.txtBuscaNome.TextChanged += new System.EventHandler(this.txtBuscaNome_TextChanged);
-            this.txtBuscaNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscaNome_KeyDown);
-            this.txtBuscaNome.Leave += new System.EventHandler(this.txtBuscaNome_Leave);
-            // 
-            // txtBuscaCodigo
-            // 
-            this.txtBuscaCodigo.BackColor = System.Drawing.Color.White;
-            this.txtBuscaCodigo.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscaCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscaCodigo.Location = new System.Drawing.Point(561, 17);
-            this.txtBuscaCodigo.Name = "txtBuscaCodigo";
-            this.txtBuscaCodigo.Size = new System.Drawing.Size(86, 23);
-            this.txtBuscaCodigo.TabIndex = 4;
-            this.txtBuscaCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBuscaCodigo.TextChanged += new System.EventHandler(this.txtBuscaCodigo_TextChanged);
-            // 
-            // txtCNPJBusca
-            // 
-            this.txtCNPJBusca.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCNPJBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCNPJBusca.Location = new System.Drawing.Point(807, 14);
-            this.txtCNPJBusca.Name = "txtCNPJBusca";
-            this.txtCNPJBusca.Size = new System.Drawing.Size(143, 23);
-            this.txtCNPJBusca.TabIndex = 16;
-            this.txtCNPJBusca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCNPJBusca.TextChanged += new System.EventHandler(this.txtCNPJBusca_TextChanged);
-            // 
-            // txtCPFBusca
-            // 
-            this.txtCPFBusca.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPFBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCPFBusca.Location = new System.Drawing.Point(252, 14);
-            this.txtCPFBusca.Name = "txtCPFBusca";
-            this.txtCPFBusca.Size = new System.Drawing.Size(139, 23);
-            this.txtCPFBusca.TabIndex = 15;
-            this.txtCPFBusca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCPFBusca.TextChanged += new System.EventHandler(this.txtCPFBusca_TextChanged);
-            // 
-            // txtDataFinal
-            // 
-            this.txtDataFinal.BackColor = System.Drawing.Color.White;
-            this.txtDataFinal.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDataFinal.Location = new System.Drawing.Point(699, 14);
-            this.txtDataFinal.Name = "txtDataFinal";
-            this.txtDataFinal.Size = new System.Drawing.Size(96, 23);
-            this.txtDataFinal.TabIndex = 1;
-            this.txtDataFinal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtDataFinal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDataFinal_KeyDown);
-            this.txtDataFinal.Leave += new System.EventHandler(this.txtDataFinal_Leave);
-            // 
-            // txtDataInicial
-            // 
-            this.txtDataInicial.BackColor = System.Drawing.Color.White;
-            this.txtDataInicial.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataInicial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDataInicial.Location = new System.Drawing.Point(555, 14);
-            this.txtDataInicial.Name = "txtDataInicial";
-            this.txtDataInicial.Size = new System.Drawing.Size(96, 23);
-            this.txtDataInicial.TabIndex = 0;
-            this.txtDataInicial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtBuscaEndereco
-            // 
-            this.txtBuscaEndereco.BackColor = System.Drawing.Color.White;
-            this.txtBuscaEndereco.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscaEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscaEndereco.Location = new System.Drawing.Point(725, 13);
-            this.txtBuscaEndereco.Name = "txtBuscaEndereco";
-            this.txtBuscaEndereco.Size = new System.Drawing.Size(336, 23);
-            this.txtBuscaEndereco.TabIndex = 0;
-            this.txtBuscaEndereco.TextChanged += new System.EventHandler(this.txtBuscaEndereco_TextChanged);
-            // 
-            // txtCEPBusca
-            // 
-            this.txtCEPBusca.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCEPBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCEPBusca.Location = new System.Drawing.Point(329, 13);
-            this.txtCEPBusca.Name = "txtCEPBusca";
-            this.txtCEPBusca.Size = new System.Drawing.Size(96, 23);
-            this.txtCEPBusca.TabIndex = 1;
-            this.txtCEPBusca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCEPBusca.TextChanged += new System.EventHandler(this.txtCEPBusca_TextChanged);
-            // 
             // frmMenuPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1199, 670);
+            this.ClientSize = new System.Drawing.Size(1161, 670);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblBarraMenu);
             this.Controls.Add(this.label10);
@@ -1551,6 +1551,7 @@
             this.KeyPreview = true;
             this.Location = new System.Drawing.Point(214, 46);
             this.Name = "frmMenuPessoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmMenuPessoa_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMenuPessoa_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.bsRelatorioPessoa)).EndInit();
@@ -1568,6 +1569,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficoSituacao)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgPessoa)).EndInit();
             this.MenuGeral.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -1597,7 +1599,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btInativar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btAlterar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btAdicionar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPessoa)).EndInit();
             this.ResumeLayout(false);
 
         }

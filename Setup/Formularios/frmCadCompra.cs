@@ -644,10 +644,9 @@ namespace Setup.Formularios
 
         private void frmCadCompra_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Fechar == 0)
-                Geral.Erro("Use o botão Sair!");
-
-            e.Cancel = true;
+            //if (Fechar == 0)
+                //Geral.Erro("Use o botão Sair!");
+            //e.Cancel = true;
         }
 
         
@@ -827,7 +826,7 @@ namespace Setup.Formularios
             else
             {
                 Fechar = 1;
-                this.Close();
+                this.Dispose();
             }
         }
 
@@ -838,7 +837,7 @@ namespace Setup.Formularios
             else
             {
                 Fechar = 1;
-                this.Close();
+                this.Dispose();
             }
         }
 
